@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly | Conference Portal Login &amp; Signup</title>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="login.css">
+
+</head>
+
+<body>
+
+
+<!-- =========================================================
+     AUTH PAGE
+========================================================= -->
+
+<section class="auth-page">
+
+
+    <!-- =====================================================
+         BACK HOME
+    ====================================================== -->
+
+    <a href="index.html" class="auth-home-button">
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+        <span>
+            Back To Home
+        </span>
+
+    </a>
+
+
+
+    <!-- =====================================================
+         AUTH CONTAINER
+    ====================================================== -->
+
+    <div class="auth-container">
+
+
+        <!-- =================================================
+             LEFT IMAGE / BRAND AREA
+        ================================================== -->
+
+        <div class="auth-visual">
+
+            <div class="auth-visual-overlay"></div>
+
+            <div class="auth-visual-content">
+
+                <a
+                    href="index.html"
+                    class="auth-logo"
+                >
+
+                    <img
+                        src="Stackly-logo-Blue.webp"
+                        alt="Stackly Event Conference Logo"
+                    >
+
+                </a>
+
+
+                <span class="auth-small-title">
+                    Welcome To Stackly
+                </span>
+
+
+                <h1>
+                    Your Flagship Conference
+                    <strong>Starts Here</strong>
+                </h1>
+
+
+                <div class="auth-visual-line"></div>
+
+
+                <span class="auth-visual-quote">
+                    "Where visionary ideas take center stage
+                    and global leaders connect."
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             RIGHT AUTH AREA
+        ================================================== -->
+
+        <div class="auth-content">
+
+
+            <!-- =================================================
+                 AUTH HEADER
+            ================================================== -->
+
+            <div class="auth-header">
+
+                <a
+                    href="index.html"
+                    class="auth-mobile-logo"
+                >
+
+                    <img
+                        src="Stackly-logo-Blue.webp"
+                        alt="Stackly Logo"
+                    >
+
+                </a>
+
+
+                <div class="auth-switch">
+
+                    <button
+                        type="button"
+                        class="auth-tab active"
+                        id="loginTab"
+                    >
+                        Login
+                    </button>
+
+                    <button
+                        type="button"
+                        class="auth-tab"
+                        id="signupTab"
+                    >
+                        Sign Up
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 LOGIN FORM
+            ================================================== -->
+
+            <div
+                class="auth-form-wrapper login-form-wrapper active"
+                id="loginFormWrapper"
+            >
+
+                <div class="auth-form-heading">
+
+                    <span>
+                        Welcome Back
+                    </span>
+
+                    <h2>
+                        Login To Your
+                        <strong>Account</strong>
+                    </h2>
+
+                    <p>
+                        Enter your conference portal credentials to continue.
+                    </p>
+
+                </div>
+
+
+                <form
+                    id="loginForm"
+                    class="auth-form"
+                    novalidate
+                >
+
+
+                    <!-- ==========================================
+                         LOGIN ROLE
+                    =========================================== -->
+
+                    <div class="auth-form-group">
+
+                        <label>
+                            Login As <span class="required-star">*</span>
+                        </label>
+
+
+                        <div class="auth-input-box role-input">
+
+
+                            <div class="role-dropdown">
+
+
+                                <!-- DROPDOWN BUTTON -->
+
+                                <button
+                                    type="button"
+                                    class="dropdown-btn"
+                                    id="loginRoleBtn"
+                                    aria-expanded="false"
+                                    aria-controls="loginDropdownMenu"
+                                >
+
+                                    <i
+                                        class="fa-solid fa-user-shield left-icon"
+                                    ></i>
+
+                                    <span id="loginSelectedRole">
+                                        Select your role
+                                    </span>
+
+                                    <i
+                                        class="fa-solid fa-angle-down arrow"
+                                    ></i>
+
+                                </button>
+
+
+
+                                <!-- DROPDOWN MENU -->
+
+                                <div
+                                    class="dropdown-menu"
+                                    id="loginDropdownMenu"
+                                    role="listbox"
+                                >
+
+                                    <!-- CUSTOMER -->
+
+                                    <button
+                                        type="button"
+                                        class="dropdown-item"
+                                        data-value="customer"
+                                    >
+
+                                        <i class="fa-solid fa-user"></i>
+
+                                        <span>
+                                            Client
+                                        </span>
+
+                                    </button>
+
+
+                                    <!-- ADMIN -->
+
+                                    <button
+                                        type="button"
+                                        class="dropdown-item"
+                                        data-value="admin"
+                                    >
+
+                                        <i class="fa-solid fa-user-shield"></i>
+
+                                        <span>
+                                            Admin
+                                        </span>
+
+                                    </button>
+
+                                </div>
+
+
+                                <input
+                                    type="hidden"
+                                    id="loginRole"
+                                    name="loginRole"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ==========================================
+                         EMAIL
+                    =========================================== -->
+
+                    <div class="auth-form-group">
+
+                        <label for="loginEmail">
+                            Gmail Address <span class="required-star">*</span>
+                        </label>
+
+                        <div class="auth-input-box">
+
+                            <i class="fa-regular fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="loginEmail"
+                                placeholder="yourname@gmail.com"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ==========================================
+                         PASSWORD
+                    =========================================== -->
+
+                    <div class="auth-form-group">
+
+                        <label for="loginPassword">
+                            Password <span class="required-star">*</span>
+                        </label>
+
+                        <div class="auth-input-box">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="loginPassword"
+                                placeholder="Enter strong password (e.g. Pass@123)"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-target="loginPassword"
+                                aria-label="Show password"
+                            >
+
+                                <i class="fa-regular fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                        <small class="password-rule-hint">Must be 8+ chars with uppercase, lowercase, number &amp; symbol.</small>
+
+                    </div>
+
+
+
+                    <!-- ==========================================
+                         REMEMBER / FORGOT
+                    =========================================== -->
+
+                    <div class="auth-options">
+
+                        <label class="remember-me">
+
+                            <input
+                                type="checkbox"
+                                id="rememberMe"
+                                required
+                            >
+
+                            <span class="custom-checkbox"></span>
+
+                            <span>
+                                Remember Me <span class="required-star">*</span>
+                            </span>
+
+                        </label>
+
+
+                        <a
+                            href="404.html"
+                            class="forgot-password"
+                        >
+                            Forgot Password?
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- LOGIN BUTTON -->
+
+                    <button
+                        type="submit"
+                        class="auth-submit-button"
+                    >
+
+                        Login To Account
+
+                        <span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+
+                    </button>
+
+
+                    <div
+                        class="auth-message"
+                        id="loginMessage"
+                    ></div>
+
+
+
+                    <!-- SIGNUP LINK -->
+
+                    <div class="auth-switch-message">
+
+                        <span>
+                            Don't have an account?
+                        </span>
+
+                        <button
+                            type="button"
+                            id="goToSignup"
+                        >
+                            Create Account
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SIGNUP FORM
+            ================================================== -->
+
+            <div
+                class="auth-form-wrapper signup-form-wrapper"
+                id="signupFormWrapper"
+            >
+
+                <div class="auth-form-heading">
+
+                    <span>
+                        Begin Your Summit
+                    </span>
+
+                    <h2>
+                        Create Your
+                        <strong>Account</strong>
+                    </h2>
+
+                    <p>
+                        Join us and start managing your upcoming
+                        conferences and corporate events.
+                    </p>
+
+                </div>
+
+
+                <form
+                    id="signupForm"
+                    class="auth-form"
+                    novalidate
+                >
+
+
+                    <!-- ==========================================
+                         NAME
+                    =========================================== -->
+
+                    <div class="auth-form-group">
+
+                        <label for="signupName">
+                            Full Name <span class="required-star">*</span>
+                        </label>
+
+                        <div class="auth-input-box">
+
+                            <i class="fa-regular fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="signupName"
+                                placeholder="Enter letters only (max 16)"
+                                maxlength="16"
+                                pattern="[A-Za-z]{1,16}"
+                                autocomplete="name"
+                                required
+                            >
+
+                        </div>
+
+                        <small class="password-rule-hint">Alphabets only, maximum 16 letters (no spaces).</small>
+
+                    </div>
+
+
+
+                    <!-- ==========================================
+                         SIGNUP ROLE
+                    =========================================== -->
+
+                    <div class="auth-form-group">
+
+                        <label>
+                            Register As <span class="required-star">*</span>
+                        </label>
+
+
+                        <div class="auth-input-box role-input">
+
+                            <div class="role-dropdown">
+
+
+                                <!-- DROPDOWN BUTTON -->
+
+                                <button
+                                    type="button"
+                                    class="dropdown-btn"
+                                    id="signupRoleBtn"
+                                    aria-expanded="false"
+                                    aria-controls="signupDropdownMenu"
+                                >
+
+                                    <i
+                                        class="fa-solid fa-user-shield left-icon"
+                                    ></i>
+
+                                    <span id="signupSelectedRole">
+                                        Select your role
+                                    </span>
+
+                                    <i
+                                        class="fa-solid fa-angle-down arrow"
+                                    ></i>
+
+                                </button>
+
+
+
+                                <!-- DROPDOWN MENU -->
+
+                                <div
+                                    class="dropdown-menu"
+                                    id="signupDropdownMenu"
+                                    role="listbox"
+                                >
+
+                                    <!-- CUSTOMER -->
+
+                                    <button
+                                        type="button"
+                                        class="dropdown-item"
+                                        data-value="customer"
+                                    >
+
+                                        <i class="fa-solid fa-user"></i>
+
+                                        <span>
+                                            Client
+                                        </span>
+
+                                    </button>
+
+
+                                    <!-- ADMIN -->
+
+                                    <button
+                                        type="button"
+                                        class="dropdown-item"
+                                        data-value="admin"
+                                    >
+
+                                        <i class="fa-solid fa-user-shield"></i>
+
+                                        <span>
+                                            Admin
+                                        </span>
+
+                                    </button>
+
+                                </div>
+
+
+                                <input
+                                    type="hidden"
+                                    id="signupRole"
+                                    name="signupRole"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ==========================================
+                         EMAIL
+                    =========================================== -->
+
+                    <div class="auth-form-group">
+
+                        <label for="signupEmail">
+                            Gmail Address <span class="required-star">*</span>
+                        </label>
+
+                        <div class="auth-input-box">
+
+                            <i class="fa-regular fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="signupEmail"
+                                placeholder="yourname@gmail.com"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ==========================================
+                         PASSWORD
+                    =========================================== -->
+
+                    <div class="auth-form-group">
+
+                        <label for="signupPassword">
+                            Password <span class="required-star">*</span>
+                        </label>
+
+                        <div class="auth-input-box">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="signupPassword"
+                                placeholder="Create strong password (e.g. Pass@123)"
+                                autocomplete="new-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-target="signupPassword"
+                                aria-label="Show password"
+                            >
+
+                                <i class="fa-regular fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                        <small class="password-rule-hint">Must be 8+ chars with uppercase, lowercase, number &amp; symbol.</small>
+
+                    </div>
+
+
+
+                    <!-- ==========================================
+                         CONFIRM PASSWORD
+                    =========================================== -->
+
+                    <div class="auth-form-group">
+
+                        <label for="signupConfirmPassword">
+                            Confirm Password <span class="required-star">*</span>
+                        </label>
+
+                        <div class="auth-input-box">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="signupConfirmPassword"
+                                placeholder="Confirm your password"
+                                autocomplete="new-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-target="signupConfirmPassword"
+                                aria-label="Show password"
+                            >
+
+                                <i class="fa-regular fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ==========================================
+                         TERMS
+                    =========================================== -->
+
+                    <label class="terms-checkbox">
+
+                        <input
+                            type="checkbox"
+                            id="acceptTerms"
+                            required
+                        >
+
+                        <span class="custom-checkbox"></span>
+
+                        <span class="terms-text">
+
+                            I accept all
+
+                            <a href="404.html">
+                                Terms &amp; Conditions
+                            </a>
+
+                            and
+
+                            <a href="404.html">
+                                Privacy Policy
+                            </a>
+
+                            <span class="required-star">*</span>
+
+                        </span>
+
+                    </label>
+
+
+
+                    <!-- SIGNUP BUTTON -->
+
+                    <button
+                        type="submit"
+                        class="auth-submit-button"
+                    >
+
+                        Create Account
+
+                        <span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+
+                    </button>
+
+
+                    <div
+                        class="auth-message"
+                        id="signupMessage"
+                    ></div>
+
+
+
+                    <!-- LOGIN LINK -->
+
+                    <div class="auth-switch-message">
+
+                        <span>
+                            Already have an account?
+                        </span>
+
+                        <button
+                            type="button"
+                            id="goToLogin"
+                        >
+                            Login Here
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script src="login.js"></script>
+
+</body>
+</html>

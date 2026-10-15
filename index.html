@@ -1,0 +1,1633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly | Event &amp; Conference Management</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- =========================================================
+         HEADER
+    ========================================================= -->
+
+    <header class="header" id="header">
+
+        <!-- LOGO -->
+        <a href="index.html" class="logo">
+            <img src="Stackly-logo-Blue.webp" alt="Stackly Event & Conference Logo">
+        </a>
+
+        <!-- DESKTOP NAVIGATION -->
+        <nav class="desktop-nav">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+
+        <div class="header-actions">
+            <a href="login.html" class="login-btn">Login</a>
+        </div>
+
+        <!-- HAMBURGER -->
+        <button class="hamburger" id="hamburger" aria-label="Open Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </header>
+
+
+    <!-- =========================================================
+         MOBILE MENU OVERLAY
+    ========================================================= -->
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+
+    <!-- =========================================================
+         MOBILE MENU
+    ========================================================= -->
+
+    <aside class="mobile-menu" id="mobileMenu">
+
+        <div class="mobile-menu-top">
+            <a href="index.html" class="mobile-logo">
+                <img src="Stackly-logo-Blue.webp" alt="Stackly Conference Logo">
+            </a>
+
+            <button class="close-menu" id="closeMenu" aria-label="Close Menu">
+                &times;
+            </button>
+        </div>
+
+        <nav class="mobile-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="login.html" class="mobile-login-btn">Login</a>
+        </nav>
+
+    </aside>
+
+
+    <!-- =========================================================
+         HERO SECTION
+    ========================================================= -->
+
+    <section class="hero" id="home">
+
+        <!-- MULTIPLE BACKGROUND VIDEOS -->
+        <div class="video-container">
+
+            <!-- VIDEO 1 -->
+            <video
+                class="hero-video active"
+                autoplay
+                muted
+                playsinline
+                preload="auto"
+                poster="about-banner.webp"
+            >
+                <source src="video1.mp4" type="video/mp4">
+            </video>
+
+            <!-- VIDEO 2 -->
+            <video
+                class="hero-video"
+                muted
+                playsinline
+                preload="auto"
+                poster="services-banner.webp"
+            >
+                <source src="video2.mp4" type="video/mp4">
+            </video>
+
+            <!-- VIDEO 3 -->
+            <video
+                class="hero-video"
+                muted
+                playsinline
+                preload="auto"
+                poster="portfolio-banner.webp"
+            >
+                <source src="video3.mp4" type="video/mp4">
+            </video>
+
+            <!-- VIDEO 4 -->
+            <video
+                class="hero-video"
+                muted
+                playsinline
+                preload="auto"
+                poster="blog-banner.webp"
+            >
+                <source src="video4.mp4" type="video/mp4">
+            </video>
+
+        </div>
+
+        <!-- DARK OVERLAY -->
+        <div class="hero-overlay"></div>
+
+        <!-- HERO CONTENT -->
+        <div class="hero-content">
+
+            <div class="hero-subtitle">
+                Global Summits &amp; Corporate Forums
+            </div>
+
+            <h1 class="hero-title">
+                Conference Management
+            </h1>
+
+            <p class="hero-description">
+                We've produced world-class corporate conferences, tech summits
+                and international conventions over the last two decades—architecting
+                unforgettable stage experiences and high-impact networking.
+            </p>
+
+            <div class="hero-divider"></div>
+
+            <a href="404.html" class="hero-button">
+                Book A Summit!
+            </a>
+
+        </div>
+
+        <!-- VIDEO INDICATORS -->
+        <div class="video-controls">
+            <span class="video-dot active" data-video="0"></span>
+            <span class="video-dot" data-video="1"></span>
+            <span class="video-dot" data-video="2"></span>
+            <span class="video-dot" data-video="3"></span>
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         INTRO SECTION
+    ========================================================= -->
+
+    <section class="intro-section">
+
+        <div class="section-small-title">
+            Our Expertise
+        </div>
+
+        <h2 class="section-title">
+            Architecting World-Class Conferences
+        </h2>
+
+        <p class="section-description">
+            From C-suite leadership forums to 5,000-delegate international tech expos,
+            we engineer every stage, keynote track and networking touchpoint with precision.
+        </p>
+
+        <!-- SERVICES -->
+        <div class="services">
+
+            <!-- CARD 1 -->
+            <div class="service-card">
+                <div class="service-number">01</div>
+                <h3>Global Summit Strategy</h3>
+                <p>
+                    End-to-end conference architecture, multi-track agenda curation,
+                    keynote speaker acquisition and delegate journey design.
+                </p>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="service-card">
+                <div class="service-number">02</div>
+                <h3>Stage &amp; AV Production</h3>
+                <p>
+                    Immersive widescreen LED stage environments, broadcast-grade
+                    acoustics, dynamic lighting and live hybrid streaming.
+                </p>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="service-card">
+                <div class="service-number">03</div>
+                <h3>Delegate &amp; Expo Operations</h3>
+                <p>
+                    Seamless RFID badge check-in, sponsor pavilion management,
+                    VIP protocol hospitality and real-time show calling.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         ABOUT US SECTION
+    ========================================================= -->
+
+    <section class="about-section" id="about">
+
+        <div class="about-container">
+
+            <!-- LEFT IMAGE -->
+            <div
+                class="about-image-wrapper"
+                data-aos="fade-right"
+                data-aos-duration="1200"
+                data-aos-delay="100"
+            >
+                <div class="about-image">
+                    <img src="about-img.webp" alt="Keynote Speaker at Global Conference">
+                </div>
+            </div>
+
+            <!-- RIGHT CONTENT -->
+            <div
+                class="about-content"
+                data-aos="fade-left"
+                data-aos-duration="1200"
+                data-aos-delay="200"
+            >
+
+                <div
+                    class="about-small-title"
+                    data-aos="fade-down"
+                    data-aos-duration="800"
+                >
+                    Welcome To Stackly Event &amp; Conference Management
+                </div>
+
+                <h2
+                    class="about-title"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="100"
+                >
+                    The Premier Conference Agency
+                </h2>
+
+                <p
+                    class="about-description"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="200"
+                >
+                    We have delivered flagship corporate summits, industry congresses
+                    and global product launches over the last two decades, setting the
+                    gold standard for live and hybrid business events.
+                </p>
+
+                <!-- FEATURE 1 -->
+                <div
+                    class="about-feature"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="300"
+                >
+                    <div class="feature-icon">✦</div>
+                    <div class="feature-content">
+                        <h3>Broadcast-Grade Production</h3>
+                        <p>
+                            Deep expertise in convention staging, multi-camera broadcast,
+                            acoustic engineering and immersive keynote environments.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FEATURE 2 -->
+                <div
+                    class="about-feature"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="400"
+                >
+                    <div class="feature-icon">❉</div>
+                    <div class="feature-content">
+                        <h3>Seasoned Show Directors</h3>
+                        <p>
+                            We ensure a zero-latency conference where every keynote, panel
+                            transition and breakout track runs right on the second.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FEATURE 3 -->
+                <div
+                    class="about-feature"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="500"
+                >
+                    <div class="feature-icon">♧</div>
+                    <div class="feature-content">
+                        <h3>24/7 Command Center &amp; Support</h3>
+                        <p>
+                            Dedicated on-site technical producers, VIP speaker liaisons and
+                            live delegate support desks throughout your entire summit.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         CONFERENCE SERVICES SECTION
+    ========================================================= -->
+
+    <section class="services-section" id="services">
+
+        <div class="services-container">
+
+            <!-- SECTION HEADER -->
+            <div
+                class="services-header"
+                data-aos="fade-down"
+                data-aos-duration="1000"
+            >
+                <span class="services-small-title">
+                    Our Conference Capabilities
+                </span>
+
+                <h2 class="services-title">
+                    End-To-End Event Solutions
+                </h2>
+
+                <p class="services-description">
+                    Our strategic methodology transforms complex multi-day conferences
+                    into cohesive, high-ROI experiences for sponsors, speakers and delegates.
+                </p>
+            </div>
+
+            <!-- SERVICES GRID -->
+            <div class="services-grid">
+
+                <!-- SERVICE 01 -->
+                <div
+                    class="wedding-service-card"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="100"
+                >
+                    <div class="service-top">
+                        <div class="service-icon">♧</div>
+                        <span class="service-number">01</span>
+                    </div>
+                    <h3>Conference Architecture</h3>
+                    <p>
+                        We design comprehensive summit blueprints, multi-track schedules,
+                        venue masterplans and budget models tailored to your industry goals.
+                    </p>
+                    <a href="404.html" class="service-link">Discover More</a>
+                </div>
+
+                <!-- SERVICE 02 -->
+                <div
+                    class="wedding-service-card"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="200"
+                >
+                    <div class="service-top">
+                        <div class="service-icon">✦</div>
+                        <span class="service-number">02</span>
+                    </div>
+                    <h3>Stage &amp; Scenic Design</h3>
+                    <p>
+                        From panoramic 8K LED backdrops to custom podiums and architectural
+                        lighting, we craft commanding mainstages that captivate audiences.
+                    </p>
+                    <a href="404.html" class="service-link">Discover More</a>
+                </div>
+
+                <!-- SERVICE 03 -->
+                <div
+                    class="wedding-service-card"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="300"
+                >
+                    <div class="service-top">
+                        <div class="service-icon">♕</div>
+                        <span class="service-number">03</span>
+                    </div>
+                    <h3>Keynote &amp; Speaker Management</h3>
+                    <p>
+                        We coordinate global thought leaders, green-room rehearsals,
+                        teleprompter scripts, travel logistics and live Q&amp;A moderation.
+                    </p>
+                    <a href="404.html" class="service-link">Discover More</a>
+                </div>
+
+                <!-- SERVICE 04 -->
+                <div
+                    class="wedding-service-card"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="400"
+                >
+                    <div class="service-top">
+                        <div class="service-icon">♧</div>
+                        <span class="service-number">04</span>
+                    </div>
+                    <h3>Delegate &amp; Auditorium Seating</h3>
+                    <p>
+                        We engineer theater, classroom, boardroom and VIP gala seating
+                        layouts for effortless crowd flow and optimal sightlines.
+                    </p>
+                    <a href="404.html" class="service-link">Discover More</a>
+                </div>
+
+                <!-- SERVICE 05 -->
+                <div
+                    class="wedding-service-card"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="500"
+                >
+                    <div class="service-top">
+                        <div class="service-icon">♢</div>
+                        <span class="service-number">05</span>
+                    </div>
+                    <h3>Sponsor &amp; Expo Pavilions</h3>
+                    <p>
+                        From custom exhibition booths and lead-retrieval apps to branded
+                        networking lounges, we maximize sponsor visibility and ROI.
+                    </p>
+                    <a href="404.html" class="service-link">Discover More</a>
+                </div>
+
+                <!-- SERVICE 06 -->
+                <div
+                    class="wedding-service-card"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="600"
+                >
+                    <div class="service-top">
+                        <div class="service-icon">♧</div>
+                        <span class="service-number">06</span>
+                    </div>
+                    <h3>Executive Hospitality &amp; Galas</h3>
+                    <p>
+                        Elevate networking with curated gourmet luncheons, specialty coffee
+                        bars, VIP speaker dinners and black-tie awards banquets.
+                    </p>
+                    <a href="404.html" class="service-link">Discover More</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         UPCOMING CONFERENCES SECTION
+    ========================================================= -->
+
+    <section class="upcoming-weddings" id="upcoming-weddings">
+
+        <div class="upcoming-container">
+
+            <!-- SECTION TOP -->
+            <div class="upcoming-header">
+
+                <div class="upcoming-heading">
+                    <span class="upcoming-small-title">
+                        Upcoming Conferences
+                    </span>
+                    <h2>
+                        Featured Global Summits
+                    </h2>
+                </div>
+
+                <div class="upcoming-divider"></div>
+
+                <div class="upcoming-intro">
+                    <p>
+                        Explore our upcoming lineup of flagship technology summits,
+                        executive leadership forums and international trade conventions
+                        across India.
+                        <a href="404.html">View more</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- CONFERENCE CARDS -->
+            <div class="upcoming-grid">
+
+                <!-- CARD 01 -->
+                <article
+                    class="wedding-plan-card"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="100"
+                >
+                    <a href="404.html" class="wedding-image">
+                        <img src="wedding-plan1.webp" alt="Global AI and Cloud Summit">
+                        <div class="wedding-image-overlay">
+                            <span>View Summit</span>
+                        </div>
+                    </a>
+
+                    <div class="wedding-card-content">
+                        <div class="wedding-meta">
+                            <span>AI &amp; Enterprise Tech</span>
+                            <span class="meta-divider">|</span>
+                            <span>14 Nov 2026</span>
+                        </div>
+                        <h3>
+                            <a href="404.html">Global AI &amp; Cloud Summit</a>
+                        </h3>
+                    </div>
+                </article>
+
+                <!-- CARD 02 -->
+                <article
+                    class="wedding-plan-card"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="250"
+                >
+                    <a href="404.html" class="wedding-image">
+                        <img src="wedding-plan2.webp" alt="FinTech Leadership Forum">
+                        <div class="wedding-image-overlay">
+                            <span>View Summit</span>
+                        </div>
+                    </a>
+
+                    <div class="wedding-card-content">
+                        <div class="wedding-meta">
+                            <span>Banking &amp; Policy</span>
+                            <span class="meta-divider">|</span>
+                            <span>04 Dec 2026</span>
+                        </div>
+                        <h3>
+                            <a href="404.html">FinTech Leadership Forum</a>
+                        </h3>
+                    </div>
+                </article>
+
+                <!-- CARD 03 -->
+                <article
+                    class="wedding-plan-card"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="400"
+                >
+                    <a href="404.html" class="wedding-image">
+                        <img src="wedding-plan3.webp" alt="Healthcare and Biotech Congress">
+                        <div class="wedding-image-overlay">
+                            <span>View Summit</span>
+                        </div>
+                    </a>
+
+                    <div class="wedding-card-content">
+                        <div class="wedding-meta">
+                            <span>MedTech &amp; Research</span>
+                            <span class="meta-divider">|</span>
+                            <span>19 Jan 2027</span>
+                        </div>
+                        <h3>
+                            <a href="404.html">Healthcare &amp; Bio Congress</a>
+                        </h3>
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         WHY CHOOSE US SECTION
+    ========================================================= -->
+
+    <section class="why-choose-section" id="why-choose-us">
+
+        <div class="why-choose-container">
+
+            <!-- LEFT CONTENT -->
+            <div
+                class="why-choose-content"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+            >
+                <span class="why-small-title">
+                    Why Choose Stackly
+                </span>
+
+                <h2 class="why-title">
+                    Precision Conference Production
+                </h2>
+
+                <p class="why-intro">
+                    Engineered for flawless execution, Stackly takes pride in being
+                    the trusted conference management partner for Fortune 500 enterprises,
+                    government ministries and global associations since 2005.
+                </p>
+
+                <p class="why-description">
+                    We combine architectural stage design, broadcast-quality AV systems,
+                    digital delegate registration and white-glove speaker hospitality
+                    so your leadership team can focus entirely on thought leadership and
+                    strategic partnerships.
+                </p>
+
+                <!-- SKILLS / PROGRESS -->
+                <div class="wedding-skills">
+
+                    <div class="wedding-skill" data-aos="fade-up" data-aos-delay="100">
+                        <div class="skill-header">
+                            <span>Stage &amp; AV Production</span>
+                            <span>94%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <span class="skill-progress" style="width: 94%;"></span>
+                        </div>
+                    </div>
+
+                    <div class="wedding-skill" data-aos="fade-up" data-aos-delay="200">
+                        <div class="skill-header">
+                            <span>Summit Strategy &amp; Curation</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <span class="skill-progress" style="width: 88%;"></span>
+                        </div>
+                    </div>
+
+                    <div class="wedding-skill" data-aos="fade-up" data-aos-delay="300">
+                        <div class="skill-header">
+                            <span>VIP &amp; Delegate Hospitality</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <span class="skill-progress" style="width: 92%;"></span>
+                        </div>
+                    </div>
+
+                    <div class="wedding-skill" data-aos="fade-up" data-aos-delay="400">
+                        <div class="skill-header">
+                            <span>Sponsor &amp; Expo Operations</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <span class="skill-progress" style="width: 90%;"></span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT IMAGE / HELP CARD -->
+            <div
+                class="why-choose-image-card"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+            >
+                <div class="why-image-wrapper">
+                    <img src="bride-groom.webp" alt="Executive Leadership Panel Discussion">
+                    <div class="why-image-overlay"></div>
+                </div>
+
+                <div class="why-help-box">
+                    <h3><a href="404.html" style="color: inherit; text-decoration: none;">Planning A Major Conference?</a></h3>
+                    <a href="404.html" class="why-help-btn" aria-label="Planning a major conference">
+                        <span>&#8250;</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         TESTIMONIAL SECTION
+    ========================================================= -->
+
+    <section class="wedding-testimonial-section">
+
+        <div class="testimonial-container">
+
+            <!-- SECTION HEADER -->
+            <div
+                class="testimonial-header"
+                data-aos="fade-down"
+                data-aos-duration="900"
+            >
+                <span class="testimonial-small-title">
+                    Client Endorsements
+                </span>
+
+                <h2 class="testimonial-title">
+                    What Event Leaders Say
+                </h2>
+
+                <p class="testimonial-description">
+                    Feedback from enterprise CMOs, summit chairs and association
+                    directors who partnered with us to deliver landmark conferences.
+                </p>
+            </div>
+
+            <!-- TESTIMONIAL GRID -->
+            <div class="testimonial-grid">
+
+                <!-- TESTIMONIAL 01 -->
+                <article
+                    class="wedding-testimonial-card"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="100"
+                >
+                    <div class="testimonial-quote">&ldquo;</div>
+                    <div class="testimonial-content">
+                        <p>
+                            Stackly transformed our annual 2,000-delegate developer summit
+                            in Chennai. From the 60-foot curved LED mainstage to instant
+                            QR badge printing, every track ran with zero technical hiccups.
+                        </p>
+                    </div>
+                    <div class="testimonial-profile">
+                        <div class="testimonial-avatar">
+                            <img src="testimonial1.webp" alt="Ananya Verma">
+                        </div>
+                        <div class="testimonial-person">
+                            <h3>Ananya &amp; Karthik Rao</h3>
+                            <span>VP Marketing, CloudScale India</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- TESTIMONIAL 02 -->
+                <article
+                    class="wedding-testimonial-card"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="250"
+                >
+                    <div class="testimonial-quote">&ldquo;</div>
+                    <div class="testimonial-content">
+                        <p>
+                            Our Global FinTech Leadership Forum required simultaneous
+                            multi-language interpretation, broadcast live streaming and
+                            45 sponsor booths. The Stackly production crew exceeded every KPI.
+                        </p>
+                    </div>
+                    <div class="testimonial-profile">
+                        <div class="testimonial-avatar">
+                            <img src="testimonial2.webp" alt="Michael Chen">
+                        </div>
+                        <div class="testimonial-person">
+                            <h3>Rebecca &amp; Michael Chen</h3>
+                            <span>Chairs, APAC FinTech Conclave</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- TESTIMONIAL 03 -->
+                <article
+                    class="wedding-testimonial-card"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="400"
+                >
+                    <div class="testimonial-quote">&ldquo;</div>
+                    <div class="testimonial-content">
+                        <p>
+                            We hosted 120 international keynote speakers for our Healthcare
+                            Innovation Congress. Stackly handled protocol, stage design and
+                            the awards gala night with remarkable poise and elegance.
+                        </p>
+                    </div>
+                    <div class="testimonial-profile">
+                        <div class="testimonial-avatar">
+                            <img src="testimonial3.webp" alt="Dr. Ayesha Khan">
+                        </div>
+                        <div class="testimonial-person">
+                            <h3>Dr. Ayesha &amp; Imran Siddiqui</h3>
+                            <span>Directors, MedTech Global Forum</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- BOTTOM DECORATION -->
+            <div class="testimonial-decoration" data-aos="fade-up" data-aos-delay="500">
+                <span></span>
+                <i>✦</i>
+                <span></span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         CONFERENCE GALLERY SECTION
+    ========================================================= -->
+
+    <section class="wedding-gallery-section">
+
+        <div class="gallery-container">
+
+            <!-- SECTION HEADER -->
+            <div
+                class="gallery-header"
+                data-aos="fade-down"
+                data-aos-duration="1000"
+            >
+                <span class="gallery-small-title">
+                    Conference Gallery
+                </span>
+
+                <h2 class="gallery-title">
+                    Highlights From Our Stages
+                </h2>
+
+                <p class="gallery-description">
+                    Explore moments from our flagship technology summits, C-suite
+                    leadership forums, exhibition halls and executive awards galas.
+                </p>
+            </div>
+
+            <!-- GALLERY GRID -->
+            <div class="gallery-grid">
+
+                <!-- ITEM 1 - LARGE -->
+                <div
+                    class="gallery-item gallery-large"
+                    data-aos="zoom-in"
+                    data-aos-duration="1000"
+                    data-aos-delay="100"
+                >
+                    <a href="404.html" class="gallery-image-link">
+                        <img src="Traditional Hindu Wedding.webp" alt="Global Tech and AI Summit">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <span class="gallery-category">Tech Summit</span>
+                                <h3>Global AI &amp; Cloud Congress</h3>
+                                <span class="gallery-view">View Event <b>&rarr;</b></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- ITEM 2 -->
+                <div
+                    class="gallery-item"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="200"
+                >
+                    <a href="404.html" class="gallery-image-link">
+                        <img src="Christian Church Wedding.webp" alt="Leadership Forum">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <span class="gallery-category">Executive Forum</span>
+                                <h3>C-Suite Leadership Conclave</h3>
+                                <span class="gallery-view">View Event <b>&rarr;</b></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- ITEM 3 -->
+                <div
+                    class="gallery-item"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="300"
+                >
+                    <a href="404.html" class="gallery-image-link">
+                        <img src="Muslim Wedding.webp" alt="Developer Expo">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <span class="gallery-category">Trade Expo</span>
+                                <h3>Annual Developer &amp; SaaS Expo</h3>
+                                <span class="gallery-view">View Event <b>&rarr;</b></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- ITEM 4 - PORTRAIT -->
+                <div
+                    class="gallery-item gallery-portrait"
+                    data-aos="fade-right"
+                    data-aos-duration="900"
+                    data-aos-delay="400"
+                >
+                    <a href="404.html" class="gallery-image-link">
+                        <img src="Hindu Bride and Groom.webp" alt="Keynote Address">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <span class="gallery-category">Mainstage Keynote</span>
+                                <h3>Visionary Keynote Sessions</h3>
+                                <span class="gallery-view">View Event <b>&rarr;</b></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- ITEM 5 -->
+                <div
+                    class="gallery-item"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="500"
+                >
+                    <a href="404.html" class="gallery-image-link">
+                        <img src="Christian Bride and Groom.webp" alt="Executive Roundtable">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <span class="gallery-category">Breakout Track</span>
+                                <h3>Executive Policy Roundtable</h3>
+                                <span class="gallery-view">View Event <b>&rarr;</b></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- ITEM 6 - WIDE -->
+                <div
+                    class="gallery-item gallery-wide"
+                    data-aos="fade-left"
+                    data-aos-duration="1000"
+                    data-aos-delay="600"
+                >
+                    <a href="404.html" class="gallery-image-link">
+                        <img src="Muslim Bride and Groom.webp" alt="Awards Gala Night">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <span class="gallery-category">Awards Banquet</span>
+                                <h3>Industry Excellence Gala Night</h3>
+                                <span class="gallery-view">View Event <b>&rarr;</b></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- VIEW ALL BUTTON -->
+            <div
+                class="gallery-button-wrapper"
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aos-delay="700"
+            >
+                <a href="404.html" class="gallery-button">
+                    <span>Explore Full Portfolio</span>
+                    <b>&rarr;</b>
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         CONFERENCE PRICING SECTION
+    ========================================================= -->
+
+    <section class="wedding-pricing-section">
+
+        <div class="pricing-container">
+
+            <!-- PRICING HEADER -->
+            <div class="pricing-header">
+
+                <div
+                    class="pricing-heading"
+                    data-aos="fade-right"
+                    data-aos-duration="1000"
+                >
+                    <span class="pricing-small-title">
+                        Production Tiers
+                    </span>
+                    <h2>
+                        Conference Packages
+                    </h2>
+                </div>
+
+                <div class="pricing-divider"></div>
+
+                <div
+                    class="pricing-intro"
+                    data-aos="fade-left"
+                    data-aos-duration="1000"
+                >
+                    <p>
+                        Select from our turnkey conference management packages
+                        designed for corporate forums, multi-track summits and
+                        large-scale international conventions.
+                    </p>
+                </div>
+
+                <div
+                    class="pricing-header-button"
+                    data-aos="fade-left"
+                    data-aos-delay="200"
+                >
+                    <a href="404.html">Get A Custom Quote</a>
+                </div>
+
+            </div>
+
+            <!-- PRICING CARDS -->
+            <div class="pricing-grid">
+
+                <!-- PACKAGE 1 -->
+                <article
+                    class="wedding-price-card"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="100"
+                >
+                    <div class="price-card-top">
+                        <span class="price-category">Corporate Forum</span>
+                        <h3>Executive</h3>
+                    </div>
+
+                    <div class="price">
+                        <sup>₹</sup>
+                        <strong>1,99,999</strong>
+                    </div>
+
+                    <span class="price-subtitle">
+                        Single-Day Leadership Forum (Up to 300 Delegates)
+                    </span>
+
+                    <ul class="price-features">
+                        <li>End-to-End Agenda &amp; Venue Planning</li>
+                        <li>Mainstage LED Backdrop &amp; Pro Audio</li>
+                        <li>QR Code Badge Registration Desk</li>
+                        <li>2-Camera HD Recording &amp; Photography</li>
+                        <li>Executive Luncheon &amp; Coffee Breaks</li>
+                        <li>Dedicated On-Site Show Producer</li>
+                    </ul>
+
+                    <a href="404.html" class="price-button">Choose Plan</a>
+                </article>
+
+                <!-- PACKAGE 2 - FEATURED -->
+                <article
+                    class="wedding-price-card featured-price"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="250"
+                >
+                    <div class="featured-label">Most Popular</div>
+
+                    <div class="price-card-top">
+                        <span class="price-category">Global Summit</span>
+                        <h3>Flagship</h3>
+                    </div>
+
+                    <div class="price">
+                        <sup>₹</sup>
+                        <strong>3,49,999</strong>
+                    </div>
+
+                    <span class="price-subtitle">
+                        Multi-Track Summit &amp; Expo (Up to 1,000 Delegates)
+                    </span>
+
+                    <ul class="price-features">
+                        <li>Complete Multi-Track Summit Architecture</li>
+                        <li>Custom Widescreen LED Stage &amp; DMX Lighting</li>
+                        <li>Up to 20 Sponsor &amp; Exhibition Booths</li>
+                        <li>Multi-Cam Live Broadcast &amp; Media Reel</li>
+                        <li>VIP Speaker Green Room &amp; Protocol</li>
+                        <li>Networking Cocktail &amp; Gala Dinner</li>
+                    </ul>
+
+                    <a href="404.html" class="price-button">Choose Plan</a>
+                </article>
+
+                <!-- PACKAGE 3 -->
+                <article
+                    class="wedding-price-card"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="400"
+                >
+                    <div class="price-card-top">
+                        <span class="price-category">International Convention</span>
+                        <h3>Enterprise</h3>
+                    </div>
+
+                    <div class="price">
+                        <sup>₹</sup>
+                        <strong>5,99,999</strong>
+                    </div>
+
+                    <span class="price-subtitle">
+                        3-Day Mega Expo &amp; Congress (2,500+ Delegates)
+                    </span>
+
+                    <ul class="price-features">
+                        <li>Full Convention Center Masterplanning</li>
+                        <li>Keynote Arena + 5 Breakout Track Stages</li>
+                        <li>Custom Sponsor Pavilions &amp; Lead Capture</li>
+                        <li>Global Hybrid Streaming &amp; Interpretation</li>
+                        <li>Awards Night Production &amp; Entertainment</li>
+                        <li>24/7 Operations Command Center</li>
+                    </ul>
+
+                    <a href="404.html" class="price-button">Choose Plan</a>
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         CONFERENCE BLOG SECTION
+    ========================================================= -->
+
+    <div class="wedding-blog-container">
+
+        <!-- SECTION HEADER -->
+        <div
+            class="wedding-blog-header"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+        >
+            <span class="blog-small-title">
+                Conference Insights &amp; Playbooks
+            </span>
+
+            <h2 class="blog-title">
+                Read Our Latest Articles
+            </h2>
+
+            <p class="blog-description">
+                Discover actionable strategies on stage design, sponsor monetization,
+                hybrid broadcasting and delegate engagement for modern conferences.
+            </p>
+        </div>
+
+        <!-- BLOG GRID -->
+        <div class="wedding-blog-grid">
+
+            <!-- BLOG 01 -->
+            <article
+                class="wedding-blog-card"
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aos-delay="100"
+            >
+                <a href="404.html" class="blog-image">
+                    <img src="blog1.webp" alt="Keynote Stage Design">
+                    <span class="blog-date">
+                        <strong>05</strong> AUG
+                    </span>
+                    <div class="blog-image-overlay">
+                        <span>Read Article</span>
+                    </div>
+                </a>
+
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span>Stage Production</span>
+                        <span class="blog-meta-divider">|</span>
+                        <span>Producer</span>
+                    </div>
+                    <h3>
+                        <a href="404.html">Designing High-Impact Keynote Stages for 2026 Summits</a>
+                    </h3>
+                    <p>
+                        Explore how curved 8K LED canvases, spatial audio and dynamic
+                        lighting elevate keynote presentations and audience retention.
+                    </p>
+                    <a href="404.html" class="blog-read-more">
+                        Read More <span>&rarr;</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- BLOG 02 -->
+            <article
+                class="wedding-blog-card"
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aos-delay="250"
+            >
+                <a href="404.html" class="blog-image">
+                    <img src="blog2.webp" alt="Sponsor ROI Strategies">
+                    <span class="blog-date">
+                        <strong>12</strong> SEP
+                    </span>
+                    <div class="blog-image-overlay">
+                        <span>Read Article</span>
+                    </div>
+                </a>
+
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span>Sponsorship</span>
+                        <span class="blog-meta-divider">|</span>
+                        <span>Strategy</span>
+                    </div>
+                    <h3>
+                        <a href="404.html">Maximizing Sponsor ROI at B2B Corporate Conferences</a>
+                    </h3>
+                    <p>
+                        From interactive demo pods to AI-matched executive roundtables,
+                        learn how to turn exhibition floors into high-converting pipelines.
+                    </p>
+                    <a href="404.html" class="blog-read-more">
+                        Read More <span>&rarr;</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- BLOG 03 -->
+            <article
+                class="wedding-blog-card"
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aos-delay="400"
+            >
+                <a href="404.html" class="blog-image">
+                    <img src="blog3.webp" alt="Hybrid Event Broadcasting">
+                    <span class="blog-date">
+                        <strong>28</strong> OCT
+                    </span>
+                    <div class="blog-image-overlay">
+                        <span>Read Article</span>
+                    </div>
+                </a>
+
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span>Hybrid Tech</span>
+                        <span class="blog-meta-divider">|</span>
+                        <span>AV Team</span>
+                    </div>
+                    <h3>
+                        <a href="404.html">Seamless Hybrid Broadcasting for Global Audiences</a>
+                    </h3>
+                    <p>
+                        How to connect 1,500 in-person delegates with 10,000 virtual
+                        attendees using low-latency multi-camera broadcast workflows.
+                    </p>
+                    <a href="404.html" class="blog-read-more">
+                        Read More <span>&rarr;</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- BLOG 04 -->
+            <article
+                class="wedding-blog-card"
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aos-delay="550"
+            >
+                <a href="404.html" class="blog-image">
+                    <img src="blog4.webp" alt="Lighting and Acoustics">
+                    <span class="blog-date">
+                        <strong>08</strong> NOV
+                    </span>
+                    <div class="blog-image-overlay">
+                        <span>Read Article</span>
+                    </div>
+                </a>
+
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span>AV &amp; Lighting</span>
+                        <span class="blog-meta-divider">|</span>
+                        <span>Admin</span>
+                    </div>
+                    <h3>
+                        <a href="404.html">2026 Convention Lighting &amp; Acoustic Engineering Trends</a>
+                    </h3>
+                    <p>
+                        Discover how line-array acoustics and programmable stage wash
+                        lighting prevent delegate fatigue during full-day conferences.
+                    </p>
+                    <a href="404.html" class="blog-read-more">
+                        Read More <span>&rarr;</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- BLOG 05 -->
+            <article
+                class="wedding-blog-card"
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aos-delay="700"
+            >
+                <a href="404.html" class="blog-image">
+                    <img src="blog5.webp" alt="Multi-Track Agenda Planning">
+                    <span class="blog-date">
+                        <strong>15</strong> NOV
+                    </span>
+                    <div class="blog-image-overlay">
+                        <span>Read Article</span>
+                    </div>
+                </a>
+
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span>Agenda Design</span>
+                        <span class="blog-meta-divider">|</span>
+                        <span>Producer</span>
+                    </div>
+                    <h3>
+                        <a href="404.html">The Complete Guide to Multi-Track Summit Scheduling</a>
+                    </h3>
+                    <p>
+                        A practical framework for balancing plenary keynotes, fireside
+                        chats, hands-on workshops and structured networking breaks.
+                    </p>
+                    <a href="404.html" class="blog-read-more">
+                        Read More <span>&rarr;</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- BLOG 06 -->
+            <article
+                class="wedding-blog-card"
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aos-delay="850"
+            >
+                <a href="404.html" class="blog-image">
+                    <img src="blog6.webp" alt="Executive Networking Gala">
+                    <span class="blog-date">
+                        <strong>25</strong> NOV
+                    </span>
+                    <div class="blog-image-overlay">
+                        <span>Read Article</span>
+                    </div>
+                </a>
+
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span>Delegate Experience</span>
+                        <span class="blog-meta-divider">|</span>
+                        <span>Admin</span>
+                    </div>
+                    <h3>
+                        <a href="404.html">How to Elevate VIP &amp; C-Suite Networking Receptions</a>
+                    </h3>
+                    <p>
+                        Practical event hospitality blueprints covering VIP lounges,
+                        curated dining stations and awards ceremony production.
+                    </p>
+                    <a href="404.html" class="blog-read-more">
+                        Read More <span>&rarr;</span>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- VIEW ALL BLOG BUTTON -->
+        <div
+            class="blog-button-wrapper"
+            data-aos="fade-up"
+            data-aos-duration="900"
+            data-aos-delay="900"
+        >
+            <a href="404.html" class="blog-view-button">
+                <span>View All Articles</span>
+                <b>&rarr;</b>
+            </a>
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         PROFESSIONAL FOOTER
+    ========================================================= -->
+
+    <footer class="wedding-footer" id="footer">
+
+        <!-- NEWSLETTER -->
+        <div class="footer-newsletter-container">
+            <div class="footer-newsletter-content">
+                <span class="footer-newsletter-small">Stay Connected</span>
+                <h3>Get Conference Playbooks &amp; Insights</h3>
+                <p>
+                    Subscribe to receive summit planning checklists, stage production
+                    trends and upcoming conference announcements.
+                </p>
+            </div>
+
+            <div class="footer-newsletter-form-wrapper">
+                <form
+                    class="footer-newsletter-form"
+                    id="newsletterForm"
+                    action="404.html"
+                    method="post"
+                >
+                    <label for="footer-email" class="sr-only">
+                        Enter your Gmail address
+                    </label>
+                    <input
+                        type="email"
+                        id="footer-email"
+                        name="email"
+                        placeholder="Enter your Gmail address"
+                        required
+                    >
+                    <button type="submit">
+                        Subscribe <span>&rarr;</span>
+                    </button>
+                </form>
+
+                <div
+                    id="newsletterMessage"
+                    class="newsletter-message"
+                    aria-live="polite"
+                ></div>
+            </div>
+        </div>
+
+        <!-- FOOTER MAIN -->
+        <div class="footer-container">
+
+            <!-- FOOTER BRAND -->
+            <div class="footer-column footer-brand">
+                <a
+                    href="404.html"
+                    class="footer-logo"
+                    aria-label="Stackly Event & Conference Management Home"
+                >
+                    <img
+                        src="Stackly-logo-Blue.webp"
+                        alt="Stackly Event & Conference Management Logo"
+                    >
+                </a>
+
+                <p class="footer-description">
+                    Producing high-impact corporate conferences, technology summits,
+                    trade expos and executive leadership forums with world-class stage
+                    design and precision event management.
+                </p>
+
+                <div class="footer-social">
+                    <a href="404.html" rel="noopener noreferrer" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="404.html" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="404.html" rel="noopener noreferrer" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="404.html" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- QUICK LINKS -->
+            <div class="footer-column">
+                <h3 class="footer-heading">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="404.html">Home</a></li>
+                    <li><a href="404.html">About Us</a></li>
+                    <li><a href="404.html">Services</a></li>
+                    <li><a href="404.html">Portfolio</a></li>
+                    <li><a href="404.html">Blog</a></li>
+                    <li><a href="404.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- CONFERENCE SERVICES -->
+            <div class="footer-column">
+                <h3 class="footer-heading">Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="404.html">Conference Planning</a></li>
+                    <li><a href="404.html">Stage &amp; AV Production</a></li>
+                    <li><a href="404.html">Keynote &amp; Speaker Curation</a></li>
+                    <li><a href="404.html">Executive Hospitality</a></li>
+                    <li><a href="404.html">Sponsor &amp; Expo Booths</a></li>
+                    <li><a href="404.html">Hybrid Event Broadcast</a></li>
+                </ul>
+            </div>
+
+            <!-- CONTACT INFORMATION -->
+            <div class="footer-column footer-contact">
+                <h3 class="footer-heading">Contact Us</h3>
+                <ul class="footer-contact-list">
+                    <li>
+                        <span class="footer-contact-icon">♧</span>
+                        <div>
+                            <strong>Headquarters</strong>
+                            <a
+                                href="404.html"
+                            >
+                                Chennai, Tamil Nadu, India
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="footer-contact-icon">☎</span>
+                        <div>
+                            <strong>Phone</strong>
+                            <a href="404.html">+91 98765 43210</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="footer-contact-icon">✉</span>
+                        <div>
+                            <strong>Email</strong>
+                            <a href="404.html">hello@stackly.com</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="footer-contact-icon">◷</span>
+                        <div>
+                            <strong>Working Hours</strong>
+                            <span>Mon - Sat: 9:00 AM - 7:00 PM</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- FOOTER BOTTOM -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p class="footer-copyright">
+                    &copy; <span id="footerYear">2026</span>
+                    Stackly Event &amp; Conference Management. All Rights Reserved.
+                </p>
+
+                <div class="footer-legal-links">
+                    <a href="404.html">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="404.html">Terms &amp; Conditions</a>
+                    <span>|</span>
+                    <a href="404.html">Sitemap</a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- AOS JAVASCRIPT -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- MAIN JAVASCRIPT -->
+    <script src="index.js"></script>
+
+</body>
+</html>

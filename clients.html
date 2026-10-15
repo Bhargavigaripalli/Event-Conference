@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Corporate Clients | Stackly Conferences</title>
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- =====================================================
+         ADMIN CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="admin.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     ADMIN DASHBOARD
+========================================================= -->
+
+<div class="admin-dashboard">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="admin-sidebar"
+        id="adminSidebar"
+    >
+
+
+        <!-- =================================================
+             SIDEBAR HEADER
+        ================================================== -->
+
+        <div class="sidebar-header">
+
+            <!-- LOGO -->
+
+            <a
+                href="index.html"
+                class="admin-logo"
+            >
+
+                <img
+                    src="Stackly-logo-Blue.webp"
+                    alt="Stackly Logo"
+                >
+
+            </a>
+
+
+            <!-- CLOSE BUTTON -->
+
+            <button
+                type="button"
+                class="sidebar-close"
+                id="sidebarClose"
+                aria-label="Close sidebar"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- =================================================
+             ADMIN PROFILE
+        ================================================== -->
+
+        <div class="admin-profile">
+
+            <div class="admin-avatar">
+
+                <i class="fa-solid fa-user-shield"></i>
+
+            </div>
+
+
+            <div class="admin-profile-info">
+
+                <strong>Administrator</strong>
+
+                <small>Conference Director</small>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             SIDEBAR NAVIGATION
+        ================================================== -->
+
+        <nav class="admin-navigation">
+
+
+            <!-- =================================================
+                 MAIN
+            ================================================== -->
+
+            <div class="sidebar-section">
+
+                <div class="sidebar-section-title">
+                    MAIN
+                </div>
+
+
+                <!-- DASHBOARD -->
+
+                <a
+                    href="admin.html"
+                    class="sidebar-link"
+                >
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <!-- NOTIFICATIONS -->
+
+                <a
+                    href="404-admin.html"
+                    class="sidebar-link"
+                >
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    <span>Notifications</span>
+
+                    <span class="sidebar-badge">
+                        3
+                    </span>
+
+                </a>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 MANAGEMENT
+            ================================================== -->
+
+            <div class="sidebar-section">
+
+                <div class="sidebar-section-title">
+                    MANAGEMENT
+                </div>
+
+                <!-- CLIENTS -->
+
+                <a
+                    href="clients.html"
+                    class="sidebar-link active"
+                >
+
+                    <i class="fa-solid fa-user-group"></i>
+
+                    <span>Clients</span>
+
+                </a>
+
+
+                <!-- PROJECTS -->
+
+                <a
+                    href="projects.html"
+                    class="sidebar-link"
+                >
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                    <span>Projects</span>
+
+                </a>
+
+
+                <!-- REQUESTS -->
+
+                <a
+                    href="requests.html"
+                    class="sidebar-link"
+                >
+
+                    <i class="fa-solid fa-file-circle-check"></i>
+
+                    <span>Requests</span>
+
+                </a>
+
+
+                <!-- PROPOSALS -->
+
+                <a
+                    href="proposals.html"
+                    class="sidebar-link"
+                >
+
+                    <i class="fa-solid fa-file-signature"></i>
+
+                    <span>Proposals</span>
+
+                </a>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SYSTEM
+            ================================================== -->
+
+            <div class="sidebar-section">
+
+                <div class="sidebar-section-title">
+                    SYSTEM
+                </div>
+
+
+                <!-- SETTINGS -->
+
+                <a
+                    href="settings.html"
+                    class="sidebar-link"
+                >
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    <span>Settings</span>
+
+                </a>
+
+            </div>
+
+
+            <!-- =================================================
+                 PUBLIC SITE
+            ================================================== -->
+
+            <div class="sidebar-section">
+
+                <div class="sidebar-section-title">
+                    NAVIGATION
+                </div>
+
+                <a
+                    href="404-admin.html"
+                    class="sidebar-link"
+                >
+
+                    <i class="fa-solid fa-globe"></i>
+
+                    <span>Public Website</span>
+
+                </a>
+
+            </div>
+
+
+        </nav>
+
+
+
+        <!-- =================================================
+             SIDEBAR FOOTER
+        ================================================== -->
+
+        <div class="sidebar-footer">
+
+
+            <!-- EXIT -->
+
+            <button
+                type="button"
+                class="sidebar-exit"
+                id="logoutButton"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Logout</span>
+
+            </button>
+
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         SIDEBAR OVERLAY
+    ====================================================== -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+
+    <!-- =====================================================
+         MAIN AREA
+    ====================================================== -->
+
+    <main class="admin-main">
+
+
+        <!-- =================================================
+             TOPBAR
+        ================================================== -->
+
+        <header class="admin-topbar">
+
+
+            <!-- HAMBURGER -->
+
+            <button
+                type="button"
+                class="hamburger-button"
+                id="hamburgerButton"
+                aria-label="Open menu"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+
+            <!-- TITLE -->
+
+            <div class="topbar-title">
+
+                <span>Corporate Clients &amp; Organizers</span>
+
+            </div>
+
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="topbar-right">
+
+
+                <!-- NOTIFICATION -->
+
+                <a
+                    href="404-admin.html"
+                    class="topbar-notification"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="notification-count">
+                        3
+                    </span>
+
+                </a>
+
+
+                <!-- EMAIL -->
+
+                <div class="logged-user">
+
+                    <div class="logged-user-icon">
+
+                        <i class="fa-regular fa-user"></i>
+
+                    </div>
+
+
+                    <div class="logged-user-details">
+
+                        <small>Logged in as</small>
+
+                        <span id="adminEmail">
+                            admin@stackly.com
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </header>
+
+<!-- =========================================================
+     CLIENT PAGE CONTENT
+========================================================= -->
+
+<div class="admin-content client-page-content">
+
+    <!-- =====================================================
+         CLIENT PAGE HEADER
+    ====================================================== -->
+
+    <section class="client-page-header">
+
+        <div class="client-heading">
+
+            <span class="page-eyebrow">
+                EVENT &amp; CONFERENCE MANAGEMENT
+            </span>
+
+            <h1>
+                Corporate Clients
+            </h1>
+
+            <p>
+                Manage enterprise conference organizers, summit schedules,
+                sponsorship billing, and executive stakeholder communication from one place.
+            </p>
+
+        </div>
+
+        <div class="client-header-actions">
+
+            <a href="404-admin.html"><button
+                type="button"
+                class="client-action-btn secondary"
+                id="exportClients"
+            >
+                <i class="fa-solid fa-download"></i>
+                Export
+            </button></a>
+
+            <a href="404-admin.html"><button
+                type="button"
+                class="client-action-btn"
+                id="addClientBtn"
+            >
+                <i class="fa-solid fa-user-plus"></i>
+                Add New Client
+            </button></a>
+
+        </div>
+
+    </section>
+
+    <!-- =====================================================
+         CLIENT OVERVIEW
+    ====================================================== -->
+
+    <section class="client-overview-panel">
+
+        <div class="client-panel-header">
+
+            <div>
+
+                <span class="panel-label">
+                    CLIENT MANAGEMENT
+                </span>
+
+                <h2>
+                    All Conference Clients
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             CLIENT GRID
+        ================================================== -->
+
+        <div class="clients-grid" id="clientsGrid">
+
+
+            <!-- =================================================
+                 CLIENT 1
+            ================================================== -->
+
+            <article
+                class="client-card"
+                data-status="active"
+                data-event="wedding"
+            >
+
+                <div class="client-card-cover">
+
+                    <img
+                        src="client-priya-arun.webp"
+                        alt="NexaCloud Tech Summit"
+                    >
+
+                    <span class="client-status active">
+                        Active
+                    </span>
+
+                </div>
+
+
+                <div class="client-card-body">
+
+                    <div class="client-profile">
+
+                        <div>
+
+                            <h3>
+                                NexaCloud AI Summit
+                            </h3>
+
+                            <span>
+                                CF-2026-0148
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="client-event-info">
+
+                        <div>
+
+                            <i class="fa-regular fa-calendar"></i>
+
+                            <span>
+                                18 December 2026
+                            </span>
+
+                        </div>
+
+                        <div>
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            <span>
+                                Chennai
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="client-progress">
+
+                        <div class="progress-heading">
+
+                            <span>
+                                Production Progress
+                            </span>
+
+                            <strong>
+                                78%
+                            </strong>
+
+                        </div>
+
+                        <div class="progress-bar">
+
+                            <span style="width: 78%;"></span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="client-card-footer">
+
+                        <span class="payment-status paid">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Paid
+                        </span>
+
+                        <a href="404-admin.html"><button
+                            type="button"
+                            class="view-client-btn"
+                        >
+                            View Details
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button></a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 CLIENT 2
+            ================================================== -->
+
+            <article
+                class="client-card"
+                data-status="active"
+                data-event="reception"
+            >
+
+                <div class="client-card-cover">
+
+                    <img
+                        src="client-ananya-karthik.webp"
+                        alt="Apex FinTech Forum"
+                    >
+
+                    <span class="client-status active">
+                        Active
+                    </span>
+
+                </div>
+
+
+                <div class="client-card-body">
+
+                    <div class="client-profile">
+
+                        <div>
+
+                            <h3>
+                                Apex FinTech Forum
+                            </h3>
+
+                            <span>
+                                CF-2026-0145
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="client-event-info">
+
+                        <div>
+
+                            <i class="fa-regular fa-calendar"></i>
+
+                            <span>
+                                22 December 2026
+                            </span>
+
+                        </div>
+
+                        <div>
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            <span>
+                                Coimbatore
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="client-progress">
+
+                        <div class="progress-heading">
+
+                            <span>
+                                Production Progress
+                            </span>
+
+                            <strong>
+                                64%
+                            </strong>
+
+                        </div>
+
+                        <div class="progress-bar">
+
+                            <span style="width: 64%;"></span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="client-card-footer">
+
+                        <span class="payment-status partial">
+                            <i class="fa-solid fa-clock"></i>
+                            Partial Payment
+                        </span>
+
+                        <a href="404-admin.html"><button
+                            type="button"
+                            class="view-client-btn"
+                        >
+                            View Details
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button></a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 CLIENT 3
+            ================================================== -->
+
+            <article
+                class="client-card"
+                data-status="upcoming"
+                data-event="wedding"
+            >
+
+                <div class="client-card-cover">
+
+                    <img
+                        src="client-meera-rahul.webp"
+                        alt="BioVantage MedTech Congress"
+                    >
+
+                    <span class="client-status upcoming">
+                        Upcoming
+                    </span>
+
+                </div>
+
+
+                <div class="client-card-body">
+
+                    <div class="client-profile">
+
+                        <div>
+
+                            <h3>
+                                BioVantage Congress
+                            </h3>
+
+                            <span>
+                                CF-2026-0139
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="client-event-info">
+
+                        <div>
+
+                            <i class="fa-regular fa-calendar"></i>
+
+                            <span>
+                                04 January 2027
+                            </span>
+
+                        </div>
+
+                        <div>
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            <span>
+                                Bengaluru
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="client-progress">
+
+                        <div class="progress-heading">
+
+                            <span>
+                                Production Progress
+                            </span>
+
+                            <strong>
+                                42%
+                            </strong>
+
+                        </div>
+
+                        <div class="progress-bar">
+
+                            <span style="width: 42%;"></span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="client-card-footer">
+
+                        <span class="payment-status paid">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Paid
+                        </span>
+
+                        <a href="404-admin.html"><button
+                            type="button"
+                            class="view-client-btn"
+                        >
+                            View Details
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button></a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 CLIENT 4
+            ================================================== -->
+
+            <article
+                class="client-card"
+                data-status="pending"
+                data-event="engagement"
+            >
+
+                <div class="client-card-cover">
+
+                    <img
+                        src="client-sneha-vishal.webp"
+                        alt="Horizon Global Product Launch"
+                    >
+
+                    <span class="client-status pending">
+                        Payment Pending
+                    </span>
+
+                </div>
+
+
+                <div class="client-card-body">
+
+                    <div class="client-profile">
+
+                        <div>
+
+                            <h3>
+                                Horizon Launch Showcase
+                            </h3>
+
+                            <span>
+                                CF-2026-0134
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="client-event-info">
+
+                        <div>
+
+                            <i class="fa-regular fa-calendar"></i>
+
+                            <span>
+                                12 January 2027
+                            </span>
+
+                        </div>
+
+                        <div>
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            <span>
+                                Hyderabad
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="client-progress">
+
+                        <div class="progress-heading">
+
+                            <span>
+                                Production Progress
+                            </span>
+
+                            <strong>
+                                35%
+                            </strong>
+
+                        </div>
+
+                        <div class="progress-bar">
+
+                            <span style="width: 35%;"></span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="client-card-footer">
+
+                        <span class="payment-status pending">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                            ₹1,25,000 Pending
+                        </span>
+
+                        <a href="404-admin.html"><button
+                            type="button"
+                            class="view-client-btn"
+                        >
+                            View Details
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button></a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 CLIENT 5
+            ================================================== -->
+
+            <article
+                class="client-card"
+                data-status="completed"
+                data-event="wedding"
+            >
+
+                <div class="client-card-cover">
+
+                    <img
+                        src="client-divya-rohit.webp"
+                        alt="NetZero CleanTech Policy Forum"
+                    >
+
+                    <span class="client-status completed">
+                        Completed
+                    </span>
+
+                </div>
+
+
+                <div class="client-card-body">
+
+                    <div class="client-profile">
+
+                        <div>
+
+                            <h3>
+                                NetZero Policy Forum
+                            </h3>
+
+                            <span>
+                                CF-2026-0118
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="client-event-info">
+
+                        <div>
+
+                            <i class="fa-regular fa-calendar"></i>
+
+                            <span>
+                                28 November 2026
+                            </span>
+
+                        </div>
+
+                        <div>
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            <span>
+                                Madurai
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="client-progress">
+
+                        <div class="progress-heading">
+
+                            <span>
+                                Event Completed
+                            </span>
+
+                            <strong>
+                                100%
+                            </strong>
+
+                        </div>
+
+                        <div class="progress-bar">
+
+                            <span style="width: 100%;"></span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="client-card-footer">
+
+                        <span class="payment-status paid">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Fully Paid
+                        </span>
+
+                        <a href="404-admin.html"><button
+                            type="button"
+                            class="view-client-btn"
+                        >
+                            View Details
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button></a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+                 CLIENT 6
+            ================================================== -->
+
+            <article
+                class="client-card"
+                data-status="active"
+                data-event="haldi"
+            >
+
+                <div class="client-card-cover">
+
+                    <img
+                        src="client-kavya-sanjay.webp"
+                        alt="DevScale SaaS Convention"
+                    >
+
+                    <span class="client-status active">
+                        Active
+                    </span>
+
+                </div>
+
+
+                <div class="client-card-body">
+
+                    <div class="client-profile">
+
+                        <div>
+
+                            <h3>
+                                DevScale Convention
+                            </h3>
+
+                            <span>
+                                CF-2026-0152
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="client-event-info">
+
+                        <div>
+
+                            <i class="fa-regular fa-calendar"></i>
+
+                            <span>
+                                25 January 2027
+                            </span>
+
+                        </div>
+
+                        <div>
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            <span>
+                                Chennai
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="client-progress">
+
+                        <div class="progress-heading">
+
+                            <span>
+                                Production Progress
+                            </span>
+
+                            <strong>
+                                58%
+                            </strong>
+
+                        </div>
+
+                        <div class="progress-bar">
+
+                            <span style="width: 58%;"></span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="client-card-footer">
+
+                        <span class="payment-status partial">
+                            <i class="fa-solid fa-clock"></i>
+                            Partial Payment
+                        </span>
+
+                        <a href="404-admin.html"><button
+                            type="button"
+                            class="view-client-btn"
+                        >
+                            View Details
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button></a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CLIENT ACTIVITY + UPCOMING EVENTS
+    ====================================================== -->
+
+    <section class="client-bottom-grid">
+
+
+        <!-- =================================================
+             RECENT CLIENT ACTIVITY
+        ================================================== -->
+
+        <div class="client-widget">
+
+            <div class="client-widget-header">
+
+                <div>
+
+                    <span class="panel-label">
+                        RECENT ACTIVITY
+                    </span>
+
+                    <h2>
+                        Client Activity
+                    </h2>
+
+                </div>
+
+                <a href="404-admin.html">
+                    View All
+                </a>
+
+            </div>
+
+
+            <div class="client-activity-list">
+
+
+                <div class="client-activity-item">
+
+                    <div class="activity-icon message">
+                        <i class="fa-solid fa-message"></i>
+                    </div>
+
+                    <div class="activity-content">
+
+                        <strong>
+                            NexaCloud team sent a message
+                        </strong>
+
+                        <span>
+                            Regarding main keynote LED wall dimensions
+                        </span>
+
+                        <small>
+                            10 minutes ago
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="client-activity-item">
+
+                    <div class="activity-icon payment">
+                        <i class="fa-solid fa-indian-rupee-sign"></i>
+                    </div>
+
+                    <div class="activity-content">
+
+                        <strong>
+                            Milestone payment received
+                        </strong>
+
+                        <span>
+                            Apex FinTech Forum · ₹4,50,000
+                        </span>
+
+                        <small>
+                            32 minutes ago
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="client-activity-item">
+
+                    <div class="activity-icon booking">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+
+                    <div class="activity-content">
+
+                        <strong>
+                            New conference RFP submitted
+                        </strong>
+
+                        <span>
+                            Horizon Global Launch Showcase
+                        </span>
+
+                        <small>
+                            1 hour ago
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             UPCOMING EVENTS
+        ================================================== -->
+
+        <div class="client-widget">
+
+            <div class="client-widget-header">
+
+                <div>
+
+                    <span class="panel-label">
+                        SUMMIT CALENDAR
+                    </span>
+
+                    <h2>
+                        Upcoming Conferences
+                    </h2>
+
+                </div>
+
+                <a href="404-admin.html">
+                    View All
+                </a>
+
+            </div>
+
+
+            <div class="client-event-list">
+
+
+                <div class="client-event-row">
+
+                    <div class="client-event-date">
+
+                        <strong>
+                            18
+                        </strong>
+
+                        <span>
+                            DEC
+                        </span>
+
+                    </div>
+
+                    <div class="client-event-details">
+
+                        <strong>
+                            NexaCloud AI Summit
+                        </strong>
+
+                        <span>
+                            Global Keynote &amp; Expo
+                        </span>
+
+                        <small>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Chennai
+                        </small>
+
+                    </div>
+
+                    <span class="event-days">
+                        66 Days
+                    </span>
+
+                </div>
+
+
+                <div class="client-event-row">
+
+                    <div class="client-event-date">
+
+                        <strong>
+                            22
+                        </strong>
+
+                        <span>
+                            DEC
+                        </span>
+
+                    </div>
+
+                    <div class="client-event-details">
+
+                        <strong>
+                            Apex FinTech Forum
+                        </strong>
+
+                        <span>
+                            Executive Leadership Conclave
+                        </span>
+
+                        <small>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Coimbatore
+                        </small>
+
+                    </div>
+
+                    <span class="event-days">
+                        70 Days
+                    </span>
+
+                </div>
+
+
+                <div class="client-event-row">
+
+                    <div class="client-event-date">
+
+                        <strong>
+                            04
+                        </strong>
+
+                        <span>
+                            JAN
+                        </span>
+
+                    </div>
+
+                    <div class="client-event-details">
+
+                        <strong>
+                            BioVantage Congress
+                        </strong>
+
+                        <span>
+                            Medical &amp; Biotech Symposium
+                        </span>
+
+                        <small>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Bengaluru
+                        </small>
+
+                    </div>
+
+                    <span class="event-days">
+                        83 Days
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+</main>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     ADMIN DASHBOARD JAVASCRIPT
+========================================================= -->
+
+<script src="admin.js"></script>
+
+
+</body>
+
+</html>

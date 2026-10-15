@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>404 | Page Not Found - Stackly Conferences</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        /* =========================================================
+   ROOT
+========================================================= */
+
+:root {
+    --gold: #d6b28a;
+    --gold-light: #f1e1c9;
+    --gold-dark: #b08b62;
+
+    --white: #ffffff;
+    --black: #111111;
+    --muted: #777777;
+
+    --transition: 0.4s ease;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f8f3ed;
+    color: var(--black);
+}
+
+
+/* =========================================================
+   404 PAGE
+========================================================= */
+
+.error-page {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 20px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #faf7f3 0%,
+            #ffffff 50%,
+            #f7eee5 100%
+        );
+}
+
+
+/* =========================================================
+   LARGE BACKGROUND 404
+========================================================= */
+
+.error-page::before {
+    content: "404";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: min(30vw, 400px);
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    color:
+        rgba(214, 178, 138, 0.045);
+
+    pointer-events: none;
+
+    user-select: none;
+}
+
+
+/* =========================================================
+   FLOATING STAR
+========================================================= */
+
+.error-page::after {
+    content: "✦";
+
+    position: absolute;
+
+    top: 13%;
+    right: 14%;
+
+    font-size: 55px;
+
+    color:
+        rgba(214, 178, 138, 0.18);
+
+    animation:
+        floatingStar 5s ease-in-out infinite;
+
+    pointer-events: none;
+}
+
+
+@keyframes floatingStar {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    50% {
+        transform:
+            translateY(-12px)
+            rotate(12deg);
+    }
+
+    100% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+}
+
+
+/* =========================================================
+   ERROR CONTENT
+========================================================= */
+
+.error-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+    max-width: 580px;
+
+    text-align: center;
+
+    animation:
+        errorFade 0.9s ease forwards;
+}
+
+
+@keyframes errorFade {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+   SMALL TITLE
+========================================================= */
+
+.error-small-title {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 12px;
+
+    color: var(--gold-dark);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.8px;
+
+    text-transform: uppercase;
+
+    transition:
+        color 0.3s ease,
+        letter-spacing 0.3s ease;
+}
+
+
+.error-small-title::before,
+.error-small-title::after {
+    content: "";
+
+    width: 25px;
+
+    height: 1px;
+
+    background: var(--gold);
+
+    transition:
+        width 0.35s ease;
+}
+
+
+.error-small-title:hover {
+    color: var(--gold);
+
+    letter-spacing: 2.4px;
+}
+
+
+.error-small-title:hover::before,
+.error-small-title:hover::after {
+    width: 35px;
+}
+
+
+/* =========================================================
+   404 NUMBER
+========================================================= */
+
+.error-number {
+    margin-bottom: 8px;
+
+    color: #171717;
+
+    font-family:
+        'Playfair Display',
+        serif;
+
+    font-size:
+        clamp(95px, 14vw, 165px);
+
+    font-weight: 500;
+
+    line-height: 0.9;
+
+    letter-spacing: -5px;
+
+    text-shadow:
+        5px 5px 0
+        rgba(214, 178, 138, 0.12);
+
+    animation:
+        numberFloat 4s ease-in-out infinite;
+
+    transition:
+        color 0.4s ease,
+        text-shadow 0.4s ease;
+}
+
+
+.error-number:hover {
+    color: var(--gold-dark);
+
+    text-shadow:
+        7px 7px 0
+        rgba(214, 178, 138, 0.16);
+}
+
+
+@keyframes numberFloat {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   ERROR TITLE
+========================================================= */
+
+.error-title {
+    margin-bottom: 12px;
+
+    color: var(--black);
+
+    font-family:
+        'Playfair Display',
+        serif;
+
+    font-size:
+        clamp(27px, 4vw, 40px);
+
+    font-weight: 500;
+
+    line-height: 1.2;
+
+    transition:
+        color 0.35s ease,
+        transform 0.35s ease;
+}
+
+
+.error-title:hover {
+    color: var(--gold-dark);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.error-description {
+    max-width: 470px;
+
+    margin: 0 auto 25px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    line-height: 1.8;
+
+    transition:
+        color 0.3s ease;
+}
+
+
+.error-description:hover {
+    color: #555555;
+}
+
+
+/* =========================================================
+   BUTTON CONTAINER
+========================================================= */
+
+.error-buttons {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.error-btn {
+    position: relative;
+
+    min-width: 125px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 20px;
+
+    border: 1px solid var(--gold);
+
+    background: transparent;
+
+    color: var(--black);
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition:
+        color 0.4s ease,
+        border-color 0.4s ease,
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+/* =========================================================
+   GOLD BUTTON ANIMATION
+========================================================= */
+
+.error-btn::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 0;
+    height: 0;
+
+    border-radius: 50%;
+
+    background: var(--gold);
+
+    transform:
+        translate(-50%, -50%);
+
+    transition:
+        width 0.5s ease,
+        height 0.5s ease;
+
+    z-index: -1;
+}
+
+
+/* =========================================================
+   BUTTON HOVER
+========================================================= */
+
+.error-btn:hover {
+    color: #111111;
+
+    border-color: var(--gold);
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 9px 22px
+        rgba(214, 178, 138, 0.23);
+}
+
+
+.error-btn:hover::before {
+    width: 260px;
+    height: 260px;
+}
+
+
+/* =========================================================
+   BUTTON CLICK
+========================================================= */
+
+.error-btn:active {
+    transform:
+        translateY(-1px)
+        scale(0.97);
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.back-btn {
+    border-color:
+        rgba(17, 17, 17, 0.25);
+
+    color: var(--muted);
+}
+
+
+.back-btn::before {
+    background: #eeeeee;
+}
+
+
+.back-btn:hover {
+    color: var(--black);
+
+    border-color:
+        rgba(17, 17, 17, 0.4);
+
+    box-shadow:
+        0 9px 20px
+        rgba(17, 17, 17, 0.08);
+}
+
+
+/* =========================================================
+   BOTTOM DECORATION
+========================================================= */
+
+.error-decoration {
+    position: absolute;
+
+    left: 50%;
+    bottom: 30px;
+
+    transform:
+        translateX(-50%);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: var(--gold);
+
+    font-size: 10px;
+
+    opacity: 0.7;
+
+    animation:
+        decorationPulse 3s ease-in-out infinite;
+}
+
+
+@keyframes decorationPulse {
+
+    0% {
+        opacity: 0.45;
+    }
+
+    50% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 0.45;
+    }
+}
+
+
+.error-decoration::before,
+.error-decoration::after {
+    content: "";
+
+    width: 35px;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            var(--gold)
+        );
+}
+
+
+.error-decoration::after {
+    background:
+        linear-gradient(
+            to left,
+            transparent,
+            var(--gold)
+        );
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .error-page {
+        padding: 25px 20px;
+    }
+
+
+    .error-page::before {
+        font-size: 45vw;
+    }
+
+
+    .error-page::after {
+        top: 10%;
+        right: 7%;
+
+        font-size: 42px;
+    }
+
+
+    .error-content {
+        max-width: 500px;
+    }
+
+
+    .error-number {
+        font-size: 125px;
+
+        letter-spacing: -4px;
+    }
+
+
+    .error-title {
+        font-size: 34px;
+    }
+
+
+    .error-description {
+        max-width: 420px;
+
+        font-size: 11px;
+    }
+
+
+    .error-btn {
+        min-width: 120px;
+
+        padding: 11px 18px;
+    }
+
+
+    .error-decoration {
+        bottom: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .error-page {
+        padding: 25px 18px;
+    }
+
+
+    .error-page::before {
+        font-size: 65vw;
+    }
+
+
+    .error-page::after {
+        top: 7%;
+        right: 6%;
+
+        font-size: 32px;
+    }
+
+
+    .error-content {
+        max-width: 350px;
+    }
+
+
+    .error-small-title {
+        gap: 7px;
+
+        margin-bottom: 10px;
+
+        font-size: 8px;
+
+        letter-spacing: 1.3px;
+    }
+
+
+    .error-small-title::before,
+    .error-small-title::after {
+        width: 18px;
+    }
+
+
+    .error-small-title:hover::before,
+    .error-small-title:hover::after {
+        width: 25px;
+    }
+
+
+    .error-number {
+        margin-bottom: 10px;
+
+        font-size: 100px;
+
+        letter-spacing: -3px;
+    }
+
+
+    .error-title {
+        margin-bottom: 12px;
+
+        font-size: 27px;
+    }
+
+
+    .error-description {
+        max-width: 320px;
+
+        margin-bottom: 23px;
+
+        font-size: 10px;
+
+        line-height: 1.75;
+    }
+
+
+    .error-buttons {
+        flex-direction: row;
+
+        gap: 8px;
+    }
+
+
+    .error-btn {
+        min-width: 115px;
+
+        padding: 10px 16px;
+
+        font-size: 8px;
+
+        letter-spacing: 0.8px;
+    }
+
+
+    .error-btn:hover::before {
+        width: 220px;
+        height: 220px;
+    }
+
+
+    .error-decoration {
+        bottom: 16px;
+
+        font-size: 8px;
+
+        gap: 7px;
+    }
+
+
+    .error-decoration::before,
+    .error-decoration::after {
+        width: 22px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .error-page::after {
+        font-size: 26px;
+    }
+
+
+    .error-small-title {
+        font-size: 7px;
+    }
+
+
+    .error-number {
+        font-size: 85px;
+    }
+
+
+    .error-title {
+        font-size: 24px;
+    }
+
+
+    .error-description {
+        font-size: 9px;
+    }
+
+
+    .error-buttons {
+        gap: 7px;
+    }
+
+
+    .error-btn {
+        min-width: 105px;
+
+        padding: 9px 13px;
+
+        font-size: 7px;
+    }
+
+
+    .error-decoration {
+        bottom: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .error-page::after,
+    .error-number,
+    .error-content,
+    .error-decoration {
+        animation: none;
+    }
+
+
+    .error-btn,
+    .error-btn::before,
+    .error-number,
+    .error-title,
+    .error-small-title {
+        transition: none;
+    }
+
+}
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         404 ERROR PAGE
+    ===================================================== -->
+
+    <section class="error-page">
+
+
+        <div class="error-content">
+
+
+            <!-- SMALL TITLE -->
+
+            <div class="error-small-title">
+                Event &amp; Conference Management
+            </div>
+
+
+            <!-- 404 -->
+
+            <div class="error-number">
+                404
+            </div>
+
+
+            <!-- TITLE -->
+
+            <h1 class="error-title">
+                Oops! This Page Is Lost
+            </h1>
+
+
+            <!-- DESCRIPTION -->
+
+            <p class="error-description">
+                The conference session or page you're looking for may have been
+                moved, archived, or is temporarily unavailable.
+                Let's get you back to planning your flagship corporate event.
+            </p>
+
+
+            <!-- BUTTONS -->
+
+            <div class="error-buttons">
+
+
+                <!-- GO HOME -->
+
+                <a
+                    href="index.html"
+                    class="error-btn"
+                >
+                    Go Home
+                </a>
+
+
+                <!-- GO BACK -->
+
+                <button
+                    type="button"
+                    class="error-btn back-btn"
+                    onclick="history.back()"
+                >
+                    ← Go Back
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+        <!-- DECORATION -->
+
+        <div class="error-decoration">
+            ✦
+        </div>
+
+
+    </section>
+
+
+</body>
+
+</html>

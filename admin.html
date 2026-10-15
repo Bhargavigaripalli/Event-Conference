@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Admin Dashboard | Stackly Conferences</title>
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- =====================================================
+         ADMIN CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="admin.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     ADMIN DASHBOARD
+========================================================= -->
+
+<div class="admin-dashboard">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="admin-sidebar"
+        id="adminSidebar"
+    >
+
+
+        <!-- =================================================
+             SIDEBAR HEADER
+        ================================================== -->
+
+        <div class="sidebar-header">
+
+            <!-- LOGO -->
+
+            <a
+                href="index.html"
+                class="admin-logo"
+            >
+
+                <img
+                    src="Stackly-logo-Blue.webp"
+                    alt="Stackly Logo"
+                >
+
+            </a>
+
+
+            <!-- CLOSE BUTTON -->
+
+            <button
+                type="button"
+                class="sidebar-close"
+                id="sidebarClose"
+                aria-label="Close sidebar"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- =================================================
+             ADMIN PROFILE
+        ================================================== -->
+
+        <div class="admin-profile">
+
+            <div class="admin-avatar">
+
+                <i class="fa-solid fa-user-shield"></i>
+
+            </div>
+
+
+            <div class="admin-profile-info">
+
+                <strong>Administrator</strong>
+
+                <small>Conference Director</small>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             SIDEBAR NAVIGATION
+        ================================================== -->
+
+        <nav class="admin-navigation">
+
+
+            <!-- =================================================
+                 MAIN
+            ================================================== -->
+
+            <div class="sidebar-section">
+
+                <div class="sidebar-section-title">
+                    MAIN
+                </div>
+
+
+                <!-- DASHBOARD -->
+
+                <a
+                    href="admin.html"
+                    class="sidebar-link active"
+                >
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <!-- NOTIFICATIONS -->
+
+                <a
+                    href="404-admin.html"
+                    class="sidebar-link"
+                >
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    <span>Notifications</span>
+
+                    <span class="sidebar-badge">
+                        3
+                    </span>
+
+                </a>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 MANAGEMENT
+            ================================================== -->
+
+            <div class="sidebar-section">
+
+                <div class="sidebar-section-title">
+                    MANAGEMENT
+                </div>
+
+                <!-- CLIENTS -->
+
+                <a
+                    href="clients.html"
+                    class="sidebar-link"
+                >
+
+                    <i class="fa-solid fa-user-group"></i>
+
+                    <span>Clients</span>
+
+                </a>
+
+
+                <!-- PROJECTS -->
+
+                <a
+                    href="projects.html"
+                    class="sidebar-link"
+                >
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                    <span>Projects</span>
+
+                </a>
+
+
+                <!-- REQUESTS -->
+
+                <a
+                    href="requests.html"
+                    class="sidebar-link"
+                >
+
+                    <i class="fa-solid fa-file-circle-check"></i>
+
+                    <span>Requests</span>
+
+                </a>
+
+
+                <!-- PROPOSALS -->
+
+                <a
+                    href="proposals.html"
+                    class="sidebar-link"
+                >
+
+                    <i class="fa-solid fa-file-signature"></i>
+
+                    <span>Proposals</span>
+
+                </a>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SYSTEM
+            ================================================== -->
+
+            <div class="sidebar-section">
+
+                <div class="sidebar-section-title">
+                    SYSTEM
+                </div>
+
+
+                <!-- SETTINGS -->
+
+                <a
+                    href="settings.html"
+                    class="sidebar-link"
+                >
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    <span>Settings</span>
+
+                </a>
+
+            </div>
+
+
+            <!-- =================================================
+                 PUBLIC SITE
+            ================================================== -->
+
+            <div class="sidebar-section">
+
+                <div class="sidebar-section-title">
+                    NAVIGATION
+                </div>
+
+                <a
+                    href="404-admin.html"
+                    class="sidebar-link"
+                >
+
+                    <i class="fa-solid fa-globe"></i>
+
+                    <span>Public Website</span>
+
+                </a>
+
+            </div>
+
+
+        </nav>
+
+
+
+        <!-- =================================================
+             SIDEBAR FOOTER
+        ================================================== -->
+
+        <div class="sidebar-footer">
+
+
+            <!-- EXIT -->
+
+            <button
+                type="button"
+                class="sidebar-exit"
+                id="logoutButton"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Logout</span>
+
+            </button>
+
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         SIDEBAR OVERLAY
+    ====================================================== -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+
+    <!-- =====================================================
+         MAIN AREA
+    ====================================================== -->
+
+    <main class="admin-main">
+
+
+        <!-- =================================================
+             TOPBAR
+        ================================================== -->
+
+        <header class="admin-topbar">
+
+
+            <!-- HAMBURGER -->
+
+            <button
+                type="button"
+                class="hamburger-button"
+                id="hamburgerButton"
+                aria-label="Open menu"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+
+            <!-- TITLE -->
+
+            <div class="topbar-title">
+
+                <span>Conference Operations Dashboard</span>
+
+            </div>
+
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="topbar-right">
+
+
+                <!-- NOTIFICATION -->
+
+                <a
+                    href="404-admin.html"
+                    class="topbar-notification"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="notification-count">
+                        3
+                    </span>
+
+                </a>
+
+
+                <!-- EMAIL -->
+
+                <div class="logged-user">
+
+                    <div class="logged-user-icon">
+
+                        <i class="fa-regular fa-user"></i>
+
+                    </div>
+
+
+                    <div class="logged-user-details">
+
+                        <small>Logged in as</small>
+
+                        <span id="adminEmail">
+                            admin@stackly.com
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =================================================
+             DASHBOARD CONTENT
+        ================================================== -->
+
+        <section class="admin-content">
+
+
+            <!-- =================================================
+                 WELCOME
+            ================================================== -->
+
+            <div class="dashboard-welcome">
+
+                <div>
+
+                    <span class="welcome-label">
+                        CONFERENCE ADMIN PANEL
+                    </span>
+
+                    <h1>
+                        Welcome back, Administrator
+                    </h1>
+
+                    <p>
+                        Manage corporate clients, active conference projects,
+                        RFP requests and sponsorship proposals from one command center.
+                    </p>
+
+                </div>
+
+
+                <div class="welcome-icon">
+
+                    <i class="fa-solid fa-chart-pie"></i>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 STATISTICS
+            ================================================== -->
+
+            <div class="dashboard-stats">
+
+
+                <!-- TOTAL USERS -->
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-card-icon">
+
+                        <i class="fa-solid fa-users"></i>
+
+                    </div>
+
+
+                    <div class="dashboard-card-content">
+
+                        <span>Registered Organizers</span>
+
+                        <strong>128</strong>
+
+                        <small class="positive">
+
+                            <i class="fa-solid fa-arrow-up"></i>
+
+                            12% this month
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ACTIVE CLIENTS -->
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-card-icon">
+
+                        <i class="fa-solid fa-user-group"></i>
+
+                    </div>
+
+
+                    <div class="dashboard-card-content">
+
+                        <span>Enterprise Clients</span>
+
+                        <strong>84</strong>
+
+                        <small class="positive">
+
+                            <i class="fa-solid fa-arrow-up"></i>
+
+                            8% this month
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ACTIVE PROJECTS -->
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-card-icon">
+
+                        <i class="fa-solid fa-folder-open"></i>
+
+                    </div>
+
+
+                    <div class="dashboard-card-content">
+
+                        <span>Active Summits</span>
+
+                        <strong>36</strong>
+
+                        <small>
+                            5 New Conference Projects
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PENDING REQUESTS -->
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-card-icon">
+
+                        <i class="fa-solid fa-file-circle-check"></i>
+
+                    </div>
+
+
+                    <div class="dashboard-card-content">
+
+                        <span>Pending RFPs</span>
+
+                        <strong>17</strong>
+
+                        <small>
+                            Requires attention
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 DASHBOARD GRID
+            ================================================== -->
+
+            <div class="dashboard-grid">
+
+
+                <!-- =================================================
+                     RECENT REQUESTS
+                ================================================== -->
+
+                <div class="dashboard-panel">
+
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="panel-label">
+                                OVERVIEW
+                            </span>
+
+                            <h2>
+                                Recent Conference Requests
+                            </h2>
+
+                        </div>
+
+
+                        <a href="requests.html">
+                            View All
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+
+
+                    <div class="request-list">
+
+
+                        <!-- REQUEST 1 -->
+
+                        <div class="request-item">
+
+                            <div class="request-icon">
+
+                                <i class="fa-solid fa-user"></i>
+
+                            </div>
+
+
+                            <div class="request-info">
+
+                                <strong>
+                                    NextGen AI Summit RFP submitted
+                                </strong>
+
+                                <small>
+                                    10 minutes ago
+                                </small>
+
+                            </div>
+
+
+                            <span class="status pending">
+                                Pending
+                            </span>
+
+                        </div>
+
+
+
+                        <!-- REQUEST 2 -->
+
+                        <div class="request-item">
+
+                            <div class="request-icon">
+
+                                <i class="fa-solid fa-folder"></i>
+
+                            </div>
+
+
+                            <div class="request-info">
+
+                                <strong>
+                                    Global FinTech Expo stage approval
+                                </strong>
+
+                                <small>
+                                    1 hour ago
+                                </small>
+
+                            </div>
+
+
+                            <span class="status approved">
+                                Approved
+                            </span>
+
+                        </div>
+
+
+
+                        <!-- REQUEST 3 -->
+
+                        <div class="request-item">
+
+                            <div class="request-icon">
+
+                                <i class="fa-solid fa-file"></i>
+
+                            </div>
+
+
+                            <div class="request-info">
+
+                                <strong>
+                                    MedTech Congress AV proposal review
+                                </strong>
+
+                                <small>
+                                    3 hours ago
+                                </small>
+
+                            </div>
+
+
+                            <span class="status review">
+                                Review
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     QUICK ACTIONS
+                ================================================== -->
+
+                <div class="dashboard-panel">
+
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="panel-label">
+                                SHORTCUTS
+                            </span>
+
+                            <h2>
+                                Quick Actions
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="quick-actions">
+
+
+                        <!-- USERS -->
+
+                        <a
+                            href="clients.html"
+                            class="quick-action"
+                        >
+
+                            <i class="fa-solid fa-user-plus"></i>
+
+                            <span>
+                                Manage Organizers
+                            </span>
+
+                            <i class="fa-solid fa-arrow-right action-arrow"></i>
+
+                        </a>
+
+
+
+                        <!-- CLIENTS -->
+
+                        <a
+                            href="clients.html"
+                            class="quick-action"
+                        >
+
+                            <i class="fa-solid fa-user-group"></i>
+
+                            <span>
+                                Corporate Clients
+                            </span>
+
+                            <i class="fa-solid fa-arrow-right action-arrow"></i>
+
+                        </a>
+
+
+
+                        <!-- PROJECTS -->
+
+                        <a
+                            href="projects.html"
+                            class="quick-action"
+                        >
+
+                            <i class="fa-solid fa-folder-plus"></i>
+
+                            <span>
+                                Conference Projects
+                            </span>
+
+                            <i class="fa-solid fa-arrow-right action-arrow"></i>
+
+                        </a>
+
+
+
+                        <!-- PROPOSALS -->
+
+                        <a
+                            href="proposals.html"
+                            class="quick-action"
+                        >
+
+                            <i class="fa-solid fa-file-circle-plus"></i>
+
+                            <span>
+                                View Proposals
+                            </span>
+
+                            <i class="fa-solid fa-arrow-right action-arrow"></i>
+
+                        </a>
+
+
+
+                        <!-- SUPPORT -->
+
+                        <a
+                            href="settings.html"
+                            class="quick-action"
+                        >
+
+                            <i class="fa-solid fa-headset"></i>
+
+                            <span>
+                                Technical Support
+                            </span>
+
+                            <i class="fa-solid fa-arrow-right action-arrow"></i>
+
+                        </a>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     ADMIN DASHBOARD JAVASCRIPT
+========================================================= -->
+
+<script src="admin.js"></script>
+
+
+</body>
+
+</html>

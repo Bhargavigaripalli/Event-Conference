@@ -1,0 +1,1637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Client Organizer Portal | Stackly Conferences</title>
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- =====================================================
+         ADMIN CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="admin.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     CLIENT DASHBOARD
+========================================================= -->
+
+<div class="admin-dashboard">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="admin-sidebar"
+        id="adminSidebar"
+    >
+
+
+        <!-- =================================================
+             SIDEBAR HEADER
+        ================================================== -->
+
+        <div class="sidebar-header">
+
+            <!-- LOGO -->
+
+            <a
+                href="index.html"
+                class="admin-logo"
+            >
+
+                <img
+                    src="Stackly-logo-Blue.webp"
+                    alt="Stackly Logo"
+                >
+
+            </a>
+
+
+            <!-- CLOSE BUTTON -->
+
+            <button
+                type="button"
+                class="sidebar-close"
+                id="sidebarClose"
+                aria-label="Close sidebar"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- =================================================
+             CLIENT PROFILE
+        ================================================== -->
+
+        <div class="admin-profile">
+
+            <div class="admin-avatar">
+
+                <i class="fa-solid fa-user-tie"></i>
+
+            </div>
+
+
+            <div class="admin-profile-info">
+
+                <strong>Event Organizer</strong>
+
+                <small>Client Account</small>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             SIDEBAR NAVIGATION
+        ================================================== -->
+
+        <nav class="admin-navigation">
+
+
+            <!-- =================================================
+                 MAIN
+            ================================================== -->
+
+            <div class="sidebar-section">
+
+                <div class="sidebar-section-title">
+                    ORGANIZER PORTAL
+                </div>
+
+
+                <!-- DASHBOARD -->
+
+                <a
+                    href="#overview"
+                    data-portal-tab="overview"
+                    class="sidebar-link active"
+                >
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    <span>My Summit Overview</span>
+
+                </a>
+
+
+                <!-- NOTIFICATIONS -->
+
+                <a
+                    href="#alerts"
+                    data-portal-tab="alerts"
+                    class="sidebar-link"
+                >
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    <span>Updates &amp; Alerts</span>
+
+                    <span class="sidebar-badge">
+                        2
+                    </span>
+
+                </a>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 EVENT MANAGEMENT
+            ================================================== -->
+
+            <div class="sidebar-section">
+
+                <div class="sidebar-section-title">
+                    MY CONFERENCE
+                </div>
+
+                <a
+                    href="#speakers"
+                    data-portal-tab="speakers"
+                    class="sidebar-link"
+                >
+
+                    <i class="fa-solid fa-microphone-lines"></i>
+
+                    <span>Stage &amp; Speakers</span>
+
+                </a>
+
+                <a
+                    href="#delegates"
+                    data-portal-tab="delegates"
+                    class="sidebar-link"
+                >
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <span>Delegate Registrations</span>
+
+                </a>
+
+                <a
+                    href="#proposals"
+                    data-portal-tab="proposals"
+                    class="sidebar-link"
+                >
+
+                    <i class="fa-solid fa-file-signature"></i>
+
+                    <span>Approved Proposals</span>
+
+                </a>
+
+                <a
+                    href="#contact"
+                    data-portal-tab="contact"
+                    class="sidebar-link"
+                >
+
+                    <i class="fa-solid fa-headset"></i>
+
+                    <span>Contact Producer</span>
+
+                </a>
+
+            </div>
+
+
+            <!-- =================================================
+                 PUBLIC SITE
+            ================================================== -->
+
+            <div class="sidebar-section">
+
+                <div class="sidebar-section-title">
+                    NAVIGATION
+                </div>
+
+                <a
+                    href="#website"
+                    data-portal-tab="website"
+                    class="sidebar-link"
+                >
+
+                    <i class="fa-solid fa-globe"></i>
+
+                    <span>Public Website</span>
+
+                </a>
+
+            </div>
+
+
+        </nav>
+
+
+
+        <!-- =================================================
+             SIDEBAR FOOTER
+        ================================================== -->
+
+        <div class="sidebar-footer">
+
+
+            <!-- EXIT -->
+
+            <button
+                type="button"
+                class="sidebar-exit"
+                id="logoutButton"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Logout</span>
+
+            </button>
+
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         SIDEBAR OVERLAY
+    ====================================================== -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+
+    <!-- =====================================================
+         MAIN AREA
+    ====================================================== -->
+
+    <main class="admin-main">
+
+
+        <!-- =================================================
+             TOPBAR
+        ================================================== -->
+
+        <header class="admin-topbar">
+
+
+            <!-- HAMBURGER -->
+
+            <button
+                type="button"
+                class="hamburger-button"
+                id="hamburgerButton"
+                aria-label="Open menu"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+
+            <!-- TITLE -->
+
+            <div class="topbar-title">
+
+                <span>Client Conference Portal</span>
+
+            </div>
+
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="topbar-right">
+
+
+                <!-- NOTIFICATION -->
+
+                <a
+                    href="404-client.html"
+                    class="topbar-notification"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="notification-count">
+                        2
+                    </span>
+
+                </a>
+
+
+                <!-- EMAIL -->
+
+                <div class="logged-user">
+
+                    <div class="logged-user-icon">
+
+                        <i class="fa-regular fa-user"></i>
+
+                    </div>
+
+
+                    <div class="logged-user-details">
+
+                        <small>Logged in as</small>
+
+                        <span id="adminEmail">
+                            client@stackly.com
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =================================================
+             DASHBOARD CONTENT: OVERVIEW
+        ================================================== -->
+
+        <section class="admin-content portal-view active" id="view-overview" data-view="overview">
+
+
+            <!-- =================================================
+                 WELCOME
+            ================================================== -->
+
+            <div class="dashboard-welcome">
+
+                <div>
+
+                    <span class="welcome-label">
+                        CLIENT ORGANIZER PORTAL
+                    </span>
+
+                    <h1>
+                        Welcome back, Conference Organizer
+                    </h1>
+
+                    <p>
+                        Track your flagship conference production progress, speaker
+                        confirmations, delegate registrations, and venue milestones in real time.
+                    </p>
+
+                </div>
+
+
+                <div class="welcome-icon">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 STATISTICS
+            ================================================== -->
+
+            <div class="dashboard-stats">
+
+
+                <!-- REGISTERED DELEGATES -->
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-card-icon">
+
+                        <i class="fa-solid fa-id-badge"></i>
+
+                    </div>
+
+
+                    <div class="dashboard-card-content">
+
+                        <span>Registered Delegates</span>
+
+                        <strong>2,480</strong>
+
+                        <small class="positive">
+
+                            <i class="fa-solid fa-arrow-up"></i>
+
+                            92% of capacity target
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CONFIRMED SPEAKERS -->
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-card-icon">
+
+                        <i class="fa-solid fa-microphone-lines"></i>
+
+                    </div>
+
+
+                    <div class="dashboard-card-content">
+
+                        <span>Confirmed Speakers</span>
+
+                        <strong>38</strong>
+
+                        <small class="positive">
+
+                            <i class="fa-solid fa-check"></i>
+
+                            All keynote slots locked
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SPONSOR PAVILIONS -->
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-card-icon">
+
+                        <i class="fa-solid fa-handshake"></i>
+
+                    </div>
+
+
+                    <div class="dashboard-card-content">
+
+                        <span>Expo Sponsors</span>
+
+                        <strong>45</strong>
+
+                        <small>
+                            12 Platinum · 33 Gold Booths
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PRODUCTION READINESS -->
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-card-icon">
+
+                        <i class="fa-solid fa-bolt"></i>
+
+                    </div>
+
+
+                    <div class="dashboard-card-content">
+
+                        <span>Production Readiness</span>
+
+                        <strong>78%</strong>
+
+                        <small>
+                            On schedule for launch
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 DASHBOARD GRID
+            ================================================== -->
+
+            <div class="dashboard-grid">
+
+
+                <!-- =================================================
+                     MILESTONE UPDATES
+                ================================================== -->
+
+                <div class="dashboard-panel">
+
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="panel-label">
+                                LIVE TRACKER
+                            </span>
+
+                            <h2>
+                                Production Milestones
+                            </h2>
+
+                        </div>
+
+
+                        <a href="404-client.html">
+                            View Run-of-Show
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+
+
+                    <div class="request-list">
+
+
+                        <!-- MILESTONE 1 -->
+
+                        <div class="request-item">
+
+                            <div class="request-icon">
+
+                                <i class="fa-solid fa-tv"></i>
+
+                            </div>
+
+
+                            <div class="request-info">
+
+                                <strong>
+                                    Main Auditorium 3D Stage &amp; LED Rigging
+                                </strong>
+
+                                <small>
+                                    Signed off by Technical Director
+                                </small>
+
+                            </div>
+
+
+                            <span class="status approved">
+                                Completed
+                            </span>
+
+                        </div>
+
+
+
+                        <!-- MILESTONE 2 -->
+
+                        <div class="request-item">
+
+                            <div class="request-icon">
+
+                                <i class="fa-solid fa-qrcode"></i>
+
+                            </div>
+
+
+                            <div class="request-info">
+
+                                <strong>
+                                    Express QR Badge Kiosks &amp; Mobile App Sync
+                                </strong>
+
+                                <small>
+                                    Live stress-testing in progress
+                                </small>
+
+                            </div>
+
+
+                            <span class="status review">
+                                In Testing
+                            </span>
+
+                        </div>
+
+
+
+                        <!-- MILESTONE 3 -->
+
+                        <div class="request-item">
+
+                            <div class="request-icon">
+
+                                <i class="fa-solid fa-utensils"></i>
+
+                            </div>
+
+
+                            <div class="request-info">
+
+                                <strong>
+                                    Executive VIP Gala &amp; Networking Menu Lock
+                                </strong>
+
+                                <small>
+                                    Awaiting final dietary headcount
+                                </small>
+
+                            </div>
+
+
+                            <span class="status pending">
+                                Pending
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     ORGANIZER QUICK ACTIONS
+                ================================================== -->
+
+                <div class="dashboard-panel">
+
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="panel-label">
+                                ORGANIZER TOOLS
+                            </span>
+
+                            <h2>
+                                Quick Actions
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="quick-actions">
+
+                        <a
+                            href="404-client.html"
+                            class="quick-action"
+                        >
+                            <i class="fa-solid fa-file-arrow-down"></i>
+                            <span>
+                                Download Floor Plan &amp; CAD
+                            </span>
+                            <i class="fa-solid fa-arrow-right action-arrow"></i>
+                        </a>
+
+                        <a
+                            href="404-client.html"
+                            class="quick-action"
+                        >
+                            <i class="fa-solid fa-chalkboard-user"></i>
+                            <span>
+                                Upload Keynote Slide Decks
+                            </span>
+                            <i class="fa-solid fa-arrow-right action-arrow"></i>
+                        </a>
+
+                        <a
+                            href="404-client.html"
+                            class="quick-action"
+                        >
+                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                            <span>
+                                View Invoices &amp; Receipts
+                            </span>
+                            <i class="fa-solid fa-arrow-right action-arrow"></i>
+                        </a>
+
+                        <a
+                            href="404-client.html"
+                            class="quick-action"
+                        >
+                            <i class="fa-solid fa-comments"></i>
+                            <span>
+                                Request Production Change
+                            </span>
+                            <i class="fa-solid fa-arrow-right action-arrow"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             1. UPDATES & ALERTS SECTION
+        ================================================== -->
+
+        <section class="admin-content portal-view" id="view-alerts" data-view="alerts">
+
+            <div class="dashboard-welcome">
+                <div>
+                    <span class="welcome-label">LIVE BROADCAST CONSOLE</span>
+                    <h1>Updates &amp; Production Alerts</h1>
+                    <p>
+                        Real-time broadcast bulletins, venue access alerts, stage schedules,
+                        and VIP arrival notices for your flagship summit.
+                    </p>
+                </div>
+                <div class="welcome-icon">
+                    <i class="fa-solid fa-bell"></i>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="dashboard-stats">
+                <div class="dashboard-card">
+                    <div class="dashboard-card-icon" style="background: rgba(217, 4, 41, 0.1); color: #d90429;">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <span>Urgent Alerts</span>
+                        <strong>02</strong>
+                        <small class="positive"><i class="fa-solid fa-clock"></i> Action required today</small>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="dashboard-card-icon" style="background: rgba(0, 100, 200, 0.1); color: #0064c8;">
+                        <i class="fa-solid fa-tv"></i>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <span>Stage Broadcasts</span>
+                        <strong>04</strong>
+                        <small><i class="fa-solid fa-check"></i> AV rigs synced</small>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="dashboard-card-icon" style="background: rgba(30, 150, 80, 0.1); color: #1e9650;">
+                        <i class="fa-solid fa-qrcode"></i>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <span>Badging Terminals</span>
+                        <strong>100%</strong>
+                        <small class="positive"><i class="fa-solid fa-signal"></i> All 12 kiosks online</small>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="dashboard-card-icon" style="background: rgba(176, 139, 98, 0.15); color: #b08b62;">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <span>Venue Security</span>
+                        <strong>Active</strong>
+                        <small><i class="fa-solid fa-location-dot"></i> Chennai Trade Centre</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alerts List Panel -->
+            <div class="dashboard-panel" style="margin-top: 20px;">
+                <div class="panel-header">
+                    <div>
+                        <span class="panel-label">BROADCAST FEED</span>
+                        <h2>Live Alerts &amp; Critical Notices</h2>
+                    </div>
+                    <span style="font-size: 12px; color: #1e9650; font-weight: 600;">
+                        <i class="fa-solid fa-circle" style="font-size: 8px;"></i> Live Feed Active
+                    </span>
+                </div>
+
+                <div class="request-list">
+                    <div class="request-item" onclick="window.location.href='404-client.html'" style="cursor: pointer;">
+                        <div class="request-icon" style="background: rgba(217, 4, 41, 0.1); color: #d90429;">
+                            <i class="fa-solid fa-plane-arrival"></i>
+                        </div>
+                        <div class="request-info">
+                            <strong>Keynote Speaker Dr. Elena Rostova Arrival Confirmed</strong>
+                            <small>Flight landed at MAA Terminal 2. VIP escort en route to ITC Grand Chola Green Room A. Briefing at 3:30 PM.</small>
+                        </div>
+                        <span class="status review">Urgent</span>
+                    </div>
+
+                    <div class="request-item" onclick="window.location.href='404-client.html'" style="cursor: pointer;">
+                        <div class="request-icon" style="background: rgba(0, 100, 200, 0.1); color: #0064c8;">
+                            <i class="fa-solid fa-sliders"></i>
+                        </div>
+                        <div class="request-info">
+                            <strong>Main Auditorium 4K Curved LED Wall 60FPS Calibration Completed</strong>
+                            <small>Rigging test, 6-channel spatial audio, and backup generators certified by Senior Technical Director.</small>
+                        </div>
+                        <span class="status approved">Completed</span>
+                    </div>
+
+                    <div class="request-item" onclick="window.location.href='404-client.html'" style="cursor: pointer;">
+                        <div class="request-icon" style="background: rgba(30, 150, 80, 0.1); color: #1e9650;">
+                            <i class="fa-solid fa-id-card"></i>
+                        </div>
+                        <div class="request-info">
+                            <strong>Express QR Attendee Pass Mobile Sync Activated</strong>
+                            <small>Automated SMS and email dispatch sent to 2,480 registered delegates with dynamic QR entry codes.</small>
+                        </div>
+                        <span class="status approved">Active</span>
+                    </div>
+
+                    <div class="request-item" onclick="window.location.href='404-client.html'" style="cursor: pointer;">
+                        <div class="request-icon" style="background: rgba(176, 139, 98, 0.15); color: #b08b62;">
+                            <i class="fa-solid fa-wine-glass"></i>
+                        </div>
+                        <div class="request-info">
+                            <strong>Executive VIP Gala Dinner &amp; Networking Lounge Headcount Finalized</strong>
+                            <small>Catering menu locked for 320 executive delegates with specialized vegan &amp; gluten-free designations.</small>
+                        </div>
+                        <span class="status approved">Approved</span>
+                    </div>
+
+                    <div class="request-item" onclick="window.location.href='404-client.html'" style="cursor: pointer;">
+                        <div class="request-icon" style="background: rgba(150, 100, 220, 0.1); color: #8e44ad;">
+                            <i class="fa-solid fa-store"></i>
+                        </div>
+                        <div class="request-info">
+                            <strong>Sponsor Expo Pavilion Stage Fabrication Handed Over</strong>
+                            <small>All 45 corporate sponsor booths (Platinum, Gold, Silver) ready for brand merchandise and booth setup.</small>
+                        </div>
+                        <span class="status review">Setup Phase</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             2. STAGE & SPEAKERS SECTION
+        ================================================== -->
+
+        <section class="admin-content portal-view" id="view-speakers" data-view="speakers">
+
+            <div class="dashboard-welcome">
+                <div>
+                    <span class="welcome-label">KEYNOTE &amp; RUN-OF-SHOW</span>
+                    <h1>Stage &amp; Speaker Management</h1>
+                    <p>
+                        Review keynote stage allocations, speaker run-of-show schedules,
+                        audiovisual technical riders, and slide deck upload statuses.
+                    </p>
+                </div>
+                <div class="welcome-icon">
+                    <i class="fa-solid fa-microphone-lines"></i>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="dashboard-stats">
+                <div class="dashboard-card">
+                    <div class="dashboard-card-icon">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <span>Keynote Speakers</span>
+                        <strong>38</strong>
+                        <small class="positive"><i class="fa-solid fa-check"></i> 100% Confirmed</small>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="dashboard-card-icon">
+                        <i class="fa-solid fa-landmark"></i>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <span>Active Stages</span>
+                        <strong>03</strong>
+                        <small>Auditorium A, B &amp; Grand Ballroom</small>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="dashboard-card-icon">
+                        <i class="fa-solid fa-file-powerpoint"></i>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <span>Slide Decks Ready</span>
+                        <strong>35 / 38</strong>
+                        <small class="positive">3 in technical review</small>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="dashboard-card-icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <span>AV Rehearsals</span>
+                        <strong>On Track</strong>
+                        <small>Soundchecks begin 08:00 AM</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Speakers Grid -->
+            <div class="speakers-grid">
+                <div class="speaker-card">
+                    <div class="speaker-header">
+                        <div class="speaker-avatar">
+                            <i class="fa-solid fa-user-astronaut"></i>
+                        </div>
+                        <div class="speaker-meta">
+                            <h4>Dr. Elena Rostova</h4>
+                            <span>Chief AI Scientist · DeepTech Labs</span>
+                            <span class="speaker-badge">Keynote Headliner</span>
+                        </div>
+                    </div>
+                    <div class="speaker-session">
+                        <strong>The Future of Generative Architecture &amp; Quantum Scale Systems</strong>
+                        <div class="speaker-session-details">
+                            <span><i class="fa-solid fa-location-dot"></i> Main Stage Auditorium A</span>
+                            <span><i class="fa-regular fa-clock"></i> 09:30 AM - 10:30 AM</span>
+                            <span><i class="fa-solid fa-check-double"></i> Deck Locked</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-header">
+                        <div class="speaker-avatar">
+                            <i class="fa-solid fa-user-gear"></i>
+                        </div>
+                        <div class="speaker-meta">
+                            <h4>Marcus Vance</h4>
+                            <span>VP Infrastructure · GlobalCloud Technologies</span>
+                            <span class="speaker-badge" style="background: rgba(0, 100, 200, 0.1); color: #0064c8;">Cloud Keynote</span>
+                        </div>
+                    </div>
+                    <div class="speaker-session">
+                        <strong>Autonomous Multi-Cloud Resiliency &amp; Zero-Latency Networks</strong>
+                        <div class="speaker-session-details">
+                            <span><i class="fa-solid fa-location-dot"></i> Tech Hall Stage B</span>
+                            <span><i class="fa-regular fa-clock"></i> 11:00 AM - 12:00 PM</span>
+                            <span><i class="fa-solid fa-check-double"></i> Deck Locked</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-header">
+                        <div class="speaker-avatar">
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+                        <div class="speaker-meta">
+                            <h4>Aisha Al-Mansoor</h4>
+                            <span>Founder &amp; CEO · CyberScale Enterprise</span>
+                            <span class="speaker-badge" style="background: rgba(180, 100, 0, 0.1); color: #b46400;">Security Track</span>
+                        </div>
+                    </div>
+                    <div class="speaker-session">
+                        <strong>Zero-Trust Defensive Architectures for Global Hybrid Forums</strong>
+                        <div class="speaker-session-details">
+                            <span><i class="fa-solid fa-location-dot"></i> Executive Ballroom C</span>
+                            <span><i class="fa-regular fa-clock"></i> 02:00 PM - 03:00 PM</span>
+                            <span><i class="fa-solid fa-check-double"></i> Soundcheck Done</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-header">
+                        <div class="speaker-avatar">
+                            <i class="fa-solid fa-user-ninja"></i>
+                        </div>
+                        <div class="speaker-meta">
+                            <h4>Vikram Singhania</h4>
+                            <span>Director of Engineering · Vertex Global FinTech</span>
+                            <span class="speaker-badge">FinTech Track</span>
+                        </div>
+                    </div>
+                    <div class="speaker-session">
+                        <strong>High-Concurrency Distributed Ledger Systems in Global Finance</strong>
+                        <div class="speaker-session-details">
+                            <span><i class="fa-solid fa-location-dot"></i> Main Stage Auditorium A</span>
+                            <span><i class="fa-regular fa-clock"></i> 03:30 PM - 04:30 PM</span>
+                            <span><i class="fa-solid fa-check-double"></i> Confirmed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-header">
+                        <div class="speaker-avatar">
+                            <i class="fa-solid fa-user-graduate"></i>
+                        </div>
+                        <div class="speaker-meta">
+                            <h4>Dr. Sophia Chen</h4>
+                            <span>Head of Quantum Computing · Q-Horizon Labs</span>
+                            <span class="speaker-badge" style="background: rgba(150, 100, 220, 0.1); color: #8e44ad;">DeepTech Masterclass</span>
+                        </div>
+                    </div>
+                    <div class="speaker-session">
+                        <strong>Practical Quantum Algorithms for Real-World Supply Logistics</strong>
+                        <div class="speaker-session-details">
+                            <span><i class="fa-solid fa-location-dot"></i> Tech Hall Stage B</span>
+                            <span><i class="fa-regular fa-clock"></i> 04:45 PM - 05:45 PM</span>
+                            <span><i class="fa-solid fa-check-double"></i> Confirmed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="speaker-card">
+                    <div class="speaker-header">
+                        <div class="speaker-avatar">
+                            <i class="fa-solid fa-user-group"></i>
+                        </div>
+                        <div class="speaker-meta">
+                            <h4>Panel: Global AI Standards</h4>
+                            <span>Moderated by Stackly Editorial Board</span>
+                            <span class="speaker-badge" style="background: rgba(30, 150, 80, 0.1); color: #1e9650;">Fireside Panel</span>
+                        </div>
+                    </div>
+                    <div class="speaker-session">
+                        <strong>Governance, Safety and Global Enterprise Compliance in Generative AI</strong>
+                        <div class="speaker-session-details">
+                            <span><i class="fa-solid fa-location-dot"></i> Main Stage Auditorium A</span>
+                            <span><i class="fa-regular fa-clock"></i> 06:00 PM - 07:00 PM</span>
+                            <span><i class="fa-solid fa-microphone"></i> 5 Lapels Assigned</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             3. DELEGATE REGISTRATIONS SECTION
+        ================================================== -->
+
+        <section class="admin-content portal-view" id="view-delegates" data-view="delegates">
+
+            <div class="dashboard-welcome">
+                <div>
+                    <span class="welcome-label">ATTENDEE CREDENTIALS &amp; PASSES</span>
+                    <h1>Delegate Registrations &amp; Badging</h1>
+                    <p>
+                        Monitor real-time attendee admissions, check-in status,
+                        VIP all-access credentials, and QR pass verifications.
+                    </p>
+                </div>
+                <div class="welcome-icon">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="dashboard-stats">
+                <div class="dashboard-card">
+                    <div class="dashboard-card-icon">
+                        <i class="fa-solid fa-id-badge"></i>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <span>Total Delegates</span>
+                        <strong>2,480</strong>
+                        <small class="positive"><i class="fa-solid fa-arrow-up"></i> 92% of maximum cap</small>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="dashboard-card-icon" style="background: rgba(214, 178, 138, 0.2); color: #8e6c42;">
+                        <i class="fa-solid fa-crown"></i>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <span>VIP Executive Passes</span>
+                        <strong>320</strong>
+                        <small>Full gala &amp; lounge access</small>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="dashboard-card-icon" style="background: rgba(30, 150, 80, 0.1); color: #1e9650;">
+                        <i class="fa-solid fa-qrcode"></i>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <span>Pre-Verified Badges</span>
+                        <strong>1,890</strong>
+                        <small class="positive"><i class="fa-solid fa-check"></i> QR issued via app</small>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="dashboard-card-icon" style="background: rgba(0, 100, 200, 0.1); color: #0064c8;">
+                        <i class="fa-solid fa-ticket"></i>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <span>Kiosk Self-Print</span>
+                        <strong>590</strong>
+                        <small>Queued for onsite pickup</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Delegates Roster Table -->
+            <div class="dashboard-panel" style="margin-top: 20px;">
+                <div class="panel-header">
+                    <div>
+                        <span class="panel-label">ACTIVE ROSTER</span>
+                        <h2>Verified Conference Attendees</h2>
+                    </div>
+                    <div class="portal-search-box">
+                        <i class="fa-solid fa-magnifying-glass" style="color: #b08b62;"></i>
+                        <input type="text" id="delegateSearchInput" placeholder="Filter by name or company...">
+                    </div>
+                </div>
+
+                <div class="delegates-table-wrapper">
+                    <table class="delegates-table" id="delegatesTable">
+                        <thead>
+                            <tr>
+                                <th>Delegate</th>
+                                <th>Organization</th>
+                                <th>Designation</th>
+                                <th>Pass Type</th>
+                                <th>QR Pass ID</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Sarah Jenkins</strong></td>
+                                <td>Google DeepMind</td>
+                                <td>Director of AI Product</td>
+                                <td><span class="badge-vip">VIP All-Access</span></td>
+                                <td><code>#STK-8821</code></td>
+                                <td><span class="badge-verified"><i class="fa-solid fa-check"></i> Pre-Verified</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Rajesh Sharma</strong></td>
+                                <td>Infosys Technologies</td>
+                                <td>Principal Cloud Architect</td>
+                                <td><span class="badge-standard">Conference Pass</span></td>
+                                <td><code>#STK-8822</code></td>
+                                <td><span class="badge-checked"><i class="fa-solid fa-circle-check"></i> Checked In</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Carlos Mendez</strong></td>
+                                <td>Microsoft Corporation</td>
+                                <td>Principal Systems Engineer</td>
+                                <td><span class="badge-vip">VIP All-Access</span></td>
+                                <td><code>#STK-8823</code></td>
+                                <td><span class="badge-verified"><i class="fa-solid fa-check"></i> Pre-Verified</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Priya Sundaram</strong></td>
+                                <td>Tata Consultancy Services</td>
+                                <td>Enterprise Solutions Lead</td>
+                                <td><span class="badge-standard">Conference Pass</span></td>
+                                <td><code>#STK-8824</code></td>
+                                <td><span class="badge-checked"><i class="fa-solid fa-circle-check"></i> Checked In</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>David Kim</strong></td>
+                                <td>Samsung Electronics</td>
+                                <td>VP Hardware Research</td>
+                                <td><span class="badge-vip">Speaker VIP</span></td>
+                                <td><code>#STK-8825</code></td>
+                                <td><span class="badge-verified"><i class="fa-solid fa-check"></i> Pre-Verified</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ananya Deshmukh</strong></td>
+                                <td>Wipro Digital</td>
+                                <td>Head of Cybersecurity</td>
+                                <td><span class="badge-vip">VIP All-Access</span></td>
+                                <td><code>#STK-8826</code></td>
+                                <td><span class="badge-checked"><i class="fa-solid fa-circle-check"></i> Checked In</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             4. APPROVED PROPOSALS SECTION
+        ================================================== -->
+
+        <section class="admin-content portal-view" id="view-proposals" data-view="proposals">
+
+            <div class="dashboard-welcome">
+                <div>
+                    <span class="welcome-label">PRODUCTION CONTRACTS</span>
+                    <h1>Approved Conference Proposals</h1>
+                    <p>
+                        Access signed production contracts, audiovisual scopes, staging agreements,
+                        and vendor deliverables executed for your summit.
+                    </p>
+                </div>
+                <div class="welcome-icon">
+                    <i class="fa-solid fa-file-signature"></i>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="dashboard-stats">
+                <div class="dashboard-card">
+                    <div class="dashboard-card-icon">
+                        <i class="fa-solid fa-file-contract"></i>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <span>Signed Proposals</span>
+                        <strong>03</strong>
+                        <small class="positive"><i class="fa-solid fa-check"></i> 100% Executed</small>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="dashboard-card-icon" style="background: rgba(30, 150, 80, 0.1); color: #1e9650;">
+                        <i class="fa-solid fa-wallet"></i>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <span>Allocated Budget</span>
+                        <strong>$121,000</strong>
+                        <small>All payments on schedule</small>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="dashboard-card-icon">
+                        <i class="fa-solid fa-list-check"></i>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <span>Deliverables Track</span>
+                        <strong>9 / 9</strong>
+                        <small class="positive">All milestone sign-offs</small>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="dashboard-card-icon" style="background: rgba(0, 100, 200, 0.1); color: #0064c8;">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <span>Legal Compliance</span>
+                        <strong>Certified</strong>
+                        <small>NDA &amp; SLA verified</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proposals Grid -->
+            <div class="portal-proposals-grid">
+                <div class="portal-proposal-card">
+                    <span class="portal-proposal-badge"><i class="fa-solid fa-check-circle"></i> Executed</span>
+                    <div class="portal-proposal-ref">Contract #STK-CONF-2026-01</div>
+                    <h3 class="portal-proposal-title">Main Auditorium 3D Stage &amp; 4K Curved LED Rigging</h3>
+                    <div class="portal-proposal-cost">$58,000 USD</div>
+                    <div class="portal-proposal-meta">
+                        Complete trussing, curved high-definition LED backdrop, Line Array acoustic engineering, stage lighting and technical crew for 3 summit days.
+                    </div>
+                    <a href="404-client.html" class="portal-proposal-btn" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">
+                        <i class="fa-solid fa-file-pdf"></i> Download Executed Contract
+                    </a>
+                </div>
+
+                <div class="portal-proposal-card">
+                    <span class="portal-proposal-badge"><i class="fa-solid fa-check-circle"></i> Executed</span>
+                    <div class="portal-proposal-ref">Contract #STK-CONF-2026-02</div>
+                    <h3 class="portal-proposal-title">Express QR Kiosks &amp; Attendee Mobile App Sync</h3>
+                    <div class="portal-proposal-cost">$24,500 USD</div>
+                    <div class="portal-proposal-meta">
+                        12 self-printing high-speed badge kiosks, RFID gate turnstiles, branded attendee agenda mobile application, and real-time scanning analytics.
+                    </div>
+                    <a href="404-client.html" class="portal-proposal-btn" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">
+                        <i class="fa-solid fa-file-pdf"></i> Download Executed Contract
+                    </a>
+                </div>
+
+                <div class="portal-proposal-card">
+                    <span class="portal-proposal-badge"><i class="fa-solid fa-check-circle"></i> Executed</span>
+                    <div class="portal-proposal-ref">Contract #STK-CONF-2026-03</div>
+                    <h3 class="portal-proposal-title">Executive VIP Gala Dinner &amp; 5-Star Networking Lounge</h3>
+                    <div class="portal-proposal-cost">$38,500 USD</div>
+                    <div class="portal-proposal-meta">
+                        Executive lounge styling, bespoke bar &amp; catering for 320 executive delegates, floral centerpieces, acoustic jazz ensemble, and VIP lounge hostesses.
+                    </div>
+                    <a href="404-client.html" class="portal-proposal-btn" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">
+                        <i class="fa-solid fa-file-pdf"></i> Download Executed Contract
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             5. CONTACT PRODUCER SECTION
+        ================================================== -->
+
+        <section class="admin-content portal-view" id="view-contact" data-view="contact">
+
+            <div class="dashboard-welcome">
+                <div>
+                    <span class="welcome-label">PRODUCTION CONCIERGE</span>
+                    <h1>Contact Your Dedicated Producer</h1>
+                    <p>
+                        Direct access to your assigned Senior Conference Producer and technical control desk.
+                        Submit run-of-show adjustments, stage inquiries, and emergency updates.
+                    </p>
+                </div>
+                <div class="welcome-icon">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+            </div>
+
+            <div class="producer-grid">
+                <!-- Producer Profile Card -->
+                <div class="producer-card">
+                    <div class="producer-avatar-lg">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 22px; margin: 0 0 4px; color: #292321;">
+                        Arjun Mehta
+                    </h3>
+                    <span style="font-size: 13px; color: #b08b62; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">
+                        Senior Conference Producer
+                    </span>
+                    <p style="font-size: 12px; color: #666; margin: 12px 0 0; line-height: 1.6;">
+                        14+ years directing global summits and enterprise conventions. Assigned specifically to manage your conference from blueprint through run-of-show.
+                    </p>
+
+                    <div class="producer-info-list">
+                        <div class="producer-info-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <strong>Direct Hotline:</strong>
+                                <div>+91 98765 43210 (24/7 Live Desk)</div>
+                            </div>
+                        </div>
+
+                        <div class="producer-info-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <strong>Direct Email:</strong>
+                                <div>arjun.mehta@stackly.com</div>
+                            </div>
+                        </div>
+
+                        <div class="producer-info-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <strong>Operations Base:</strong>
+                                <div>Stackly Production Hub, Chennai HQ</div>
+                            </div>
+                        </div>
+
+                        <div class="producer-info-item">
+                            <i class="fa-solid fa-clock"></i>
+                            <div>
+                                <strong>Response Time:</strong>
+                                <div style="color: #1e9650; font-weight: 600;">Immediate (&lt; 15 mins during summit week)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fast Request Form -->
+                <div class="producer-form-card">
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 20px; margin: 0 0 6px; color: #292321;">
+                        Direct Producer Dispatch
+                    </h3>
+                    <p style="font-size: 12px; color: #777; margin: 0 0 20px;">
+                        Need to tweak keynote timing, request extra VIP passes, or check AV stage readiness? Send an instant notification to Arjun Mehta.
+                    </p>
+
+                    <form id="producerDispatchForm" action="404-client.html">
+                        <div class="producer-form-group">
+                            <label for="producerRequestType">Request Scope / Category</label>
+                            <select id="producerRequestType" required>
+                                <option value="">Select scope</option>
+                                <option>Stage AV &amp; Lighting Adjustment</option>
+                                <option>Speaker Schedule / Time Slot Change</option>
+                                <option>VIP Delegate Pass Addition</option>
+                                <option>Catering &amp; Dietary Modification</option>
+                                <option>Livestream Link &amp; Access Keys</option>
+                                <option>General Production Question</option>
+                            </select>
+                        </div>
+
+                        <div class="producer-form-group">
+                            <label for="producerUrgency">Urgency Level</label>
+                            <select id="producerUrgency" required>
+                                <option>Normal (Standard response)</option>
+                                <option>High Priority (Within 1 hour)</option>
+                                <option>Live Stage Critical (Immediate)</option>
+                            </select>
+                        </div>
+
+                        <div class="producer-form-group">
+                            <label for="producerMessage">Detailed Message / Instructions</label>
+                            <textarea id="producerMessage" rows="4" placeholder="Detail your instructions, speaker names, or timing changes here..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="producer-submit-btn">
+                            <i class="fa-solid fa-paper-plane"></i> Dispatch to Producer
+                        </button>
+
+                        <div id="producerFormFeedback" style="display: none; margin-top: 15px; padding: 12px; border-radius: 8px; font-size: 13px; background: rgba(232, 250, 240, 0.95); color: #18794e; border: 1px solid #a8dfbf;">
+                            <i class="fa-solid fa-circle-check"></i> Your request has been transmitted directly to Senior Producer Arjun Mehta. He is reviewing it now.
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             6. PUBLIC WEBSITE SECTION
+        ================================================== -->
+
+        <section class="admin-content portal-view" id="view-website" data-view="website">
+
+            <div class="dashboard-welcome">
+                <div>
+                    <span class="welcome-label">PUBLIC EVENT PORTAL</span>
+                    <h1>Public Summit Website</h1>
+                    <p>
+                        Preview and explore the live public conference website,
+                        delegate landing portal, schedule, and attendee resources.
+                    </p>
+                </div>
+                <div class="welcome-icon">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+            </div>
+
+            <div class="website-preview-card">
+                <div class="website-launch-banner">
+                    <div>
+                        <h3>Stackly Conference Live Public Website</h3>
+                        <p>
+                            Experience the public-facing summit experience seen by attendees, keynote speakers, press, and sponsors worldwide.
+                        </p>
+                    </div>
+                    <a href="404-client.html" class="website-launch-btn">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Public Website
+                    </a>
+                </div>
+
+                <h4 style="font-family: 'Playfair Display', serif; font-size: 18px; margin: 0 0 14px; color: #292321;">
+                    Public Website Pages &amp; Sections
+                </h4>
+
+                <div class="website-pages-grid">
+                    <a href="404-client.html" class="website-page-card">
+                        <div class="website-page-icon">
+                            <i class="fa-solid fa-house"></i>
+                        </div>
+                        <div>
+                            <strong>Home Page</strong>
+                            <small>Hero, highlights &amp; summit registration</small>
+                        </div>
+                    </a>
+
+                    <a href="404-client.html" class="website-page-card">
+                        <div class="website-page-icon">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </div>
+                        <div>
+                            <strong>About Us</strong>
+                            <small>Producer legacy &amp; conference directors</small>
+                        </div>
+                    </a>
+
+                    <a href="404-client.html" class="website-page-card">
+                        <div class="website-page-icon">
+                            <i class="fa-solid fa-gears"></i>
+                        </div>
+                        <div>
+                            <strong>Conference Services</strong>
+                            <small>AV, stage rigging, and VIP logistics</small>
+                        </div>
+                    </a>
+
+                    <a href="404-client.html" class="website-page-card">
+                        <div class="website-page-icon">
+                            <i class="fa-solid fa-images"></i>
+                        </div>
+                        <div>
+                            <strong>Event Portfolio</strong>
+                            <small>Past global summits &amp; case studies</small>
+                        </div>
+                    </a>
+
+                    <a href="404-client.html" class="website-page-card">
+                        <div class="website-page-icon">
+                            <i class="fa-solid fa-newspaper"></i>
+                        </div>
+                        <div>
+                            <strong>Summit Blog</strong>
+                            <small>Production playbooks &amp; keynote insights</small>
+                        </div>
+                    </a>
+
+                    <a href="404-client.html" class="website-page-card">
+                        <div class="website-page-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <strong>Contact Page</strong>
+                            <small>HQ location, proposal brief &amp; RFP</small>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     ADMIN DASHBOARD JAVASCRIPT
+========================================================= -->
+
+<script src="admin.js"></script>
+
+
+</body>
+
+</html>

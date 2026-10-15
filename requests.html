@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Client Requests | Stackly Conferences</title>
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- =====================================================
+         ADMIN CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="admin.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     ADMIN DASHBOARD
+========================================================= -->
+
+<div class="admin-dashboard">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="admin-sidebar"
+        id="adminSidebar"
+    >
+
+
+        <!-- =================================================
+             SIDEBAR HEADER
+        ================================================== -->
+
+        <div class="sidebar-header">
+
+            <!-- LOGO -->
+
+            <a
+                href="index.html"
+                class="admin-logo"
+            >
+
+                <img
+                    src="Stackly-logo-Blue.webp"
+                    alt="Stackly Logo"
+                >
+
+            </a>
+
+
+            <!-- CLOSE BUTTON -->
+
+            <button
+                type="button"
+                class="sidebar-close"
+                id="sidebarClose"
+                aria-label="Close sidebar"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- =================================================
+             ADMIN PROFILE
+        ================================================== -->
+
+        <div class="admin-profile">
+
+            <div class="admin-avatar">
+
+                <i class="fa-solid fa-user-shield"></i>
+
+            </div>
+
+
+            <div class="admin-profile-info">
+
+                <strong>Administrator</strong>
+
+                <small>Conference Director</small>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             SIDEBAR NAVIGATION
+        ================================================== -->
+
+        <nav class="admin-navigation">
+
+
+            <!-- =================================================
+                 MAIN
+            ================================================== -->
+
+            <div class="sidebar-section">
+
+                <div class="sidebar-section-title">
+                    MAIN
+                </div>
+
+
+                <!-- DASHBOARD -->
+
+                <a
+                    href="admin.html"
+                    class="sidebar-link"
+                >
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <!-- NOTIFICATIONS -->
+
+                <a
+                    href="404-admin.html"
+                    class="sidebar-link"
+                >
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    <span>Notifications</span>
+
+                    <span class="sidebar-badge">
+                        3
+                    </span>
+
+                </a>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 MANAGEMENT
+            ================================================== -->
+
+            <div class="sidebar-section">
+
+                <div class="sidebar-section-title">
+                    MANAGEMENT
+                </div>
+
+                <!-- CLIENTS -->
+
+                <a
+                    href="clients.html"
+                    class="sidebar-link"
+                >
+
+                    <i class="fa-solid fa-user-group"></i>
+
+                    <span>Clients</span>
+
+                </a>
+
+
+                <!-- PROJECTS -->
+
+                <a
+                    href="projects.html"
+                    class="sidebar-link"
+                >
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                    <span>Projects</span>
+
+                </a>
+
+
+                <!-- REQUESTS -->
+
+                <a
+                    href="requests.html"
+                    class="sidebar-link active"
+                >
+
+                    <i class="fa-solid fa-file-circle-check"></i>
+
+                    <span>Requests</span>
+
+                </a>
+
+
+                <!-- PROPOSALS -->
+
+                <a
+                    href="proposals.html"
+                    class="sidebar-link"
+                >
+
+                    <i class="fa-solid fa-file-signature"></i>
+
+                    <span>Proposals</span>
+
+                </a>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SYSTEM
+            ================================================== -->
+
+            <div class="sidebar-section">
+
+                <div class="sidebar-section-title">
+                    SYSTEM
+                </div>
+
+
+                <!-- SETTINGS -->
+
+                <a
+                    href="settings.html"
+                    class="sidebar-link"
+                >
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    <span>Settings</span>
+
+                </a>
+
+            </div>
+
+
+            <!-- =================================================
+                 PUBLIC SITE
+            ================================================== -->
+
+            <div class="sidebar-section">
+
+                <div class="sidebar-section-title">
+                    NAVIGATION
+                </div>
+
+                <a
+                    href="404-admin.html"
+                    class="sidebar-link"
+                >
+
+                    <i class="fa-solid fa-globe"></i>
+
+                    <span>Public Website</span>
+
+                </a>
+
+            </div>
+
+
+        </nav>
+
+
+
+        <!-- =================================================
+             SIDEBAR FOOTER
+        ================================================== -->
+
+        <div class="sidebar-footer">
+
+
+            <!-- EXIT -->
+
+            <button
+                type="button"
+                class="sidebar-exit"
+                id="logoutButton"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Logout</span>
+
+            </button>
+
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         SIDEBAR OVERLAY
+    ====================================================== -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+
+    <!-- =====================================================
+         MAIN AREA
+    ====================================================== -->
+
+    <main class="admin-main">
+
+
+        <!-- =================================================
+             TOPBAR
+        ================================================== -->
+
+        <header class="admin-topbar">
+
+
+            <!-- HAMBURGER -->
+
+            <button
+                type="button"
+                class="hamburger-button"
+                id="hamburgerButton"
+                aria-label="Open menu"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+
+            <!-- TITLE -->
+
+            <div class="topbar-title">
+
+                <span>Conference &amp; RFP Requests</span>
+
+            </div>
+
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="topbar-right">
+
+
+                <!-- NOTIFICATION -->
+
+                <a
+                    href="404-admin.html"
+                    class="topbar-notification"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="notification-count">
+                        3
+                    </span>
+
+                </a>
+
+
+                <!-- EMAIL -->
+
+                <div class="logged-user">
+
+                    <div class="logged-user-icon">
+
+                        <i class="fa-regular fa-user"></i>
+
+                    </div>
+
+
+                    <div class="logged-user-details">
+
+                        <small>Logged in as</small>
+
+                        <span id="adminEmail">
+                            admin@stackly.com
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </header>
+
+<!-- =========================================================
+     REQUESTS PAGE CONTENT
+     CONFERENCE EVENT ADMIN DASHBOARD
+========================================================= -->
+
+<div class="admin-content requests-page-content">
+
+    <!-- =====================================================
+         PAGE HEADER
+    ====================================================== -->
+
+    <section class="requests-page-header">
+
+        <div class="requests-heading">
+
+            <span class="requests-eyebrow">
+                CONFERENCE REQUEST MANAGEMENT
+            </span>
+
+            <h1>
+                Client RFPs &amp; Requests
+            </h1>
+
+            <p>
+                Review, qualify and assign incoming corporate conference,
+                AV production and summit requests from enterprise clients.
+            </p>
+
+        </div>
+
+        <div class="requests-header-actions">
+
+            <a href="404-admin.html"><button
+                type="button"
+                class="requests-btn requests-btn-outline"
+                id="requestExportBtn"
+            >
+                <i class="fa-solid fa-download"></i>
+                Export
+            </button></a>
+
+            <a href="404-admin.html"><button
+                type="button"
+                class="requests-btn requests-btn-primary"
+                id="newRequestBtn"
+            >
+                <i class="fa-solid fa-plus"></i>
+                New Request
+            </button></a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         REQUEST LIST
+    ====================================================== -->
+
+    <section class="requests-list-panel">
+
+        <div class="requests-panel-header">
+
+            <div>
+
+                <span class="request-section-label">
+                    REQUESTS
+                </span>
+
+                <h2>
+                    Recent Conference Requests
+                </h2>
+
+            </div>
+
+            <a href="404-admin.html">
+                View All
+            </a>
+
+        </div>
+
+
+        <div class="request-list">
+
+
+            <!-- REQUEST 1 -->
+
+            <article class="request-item">
+
+                <div class="request-client-icon purple">
+
+                    <i class="fa-solid fa-microphone-lines"></i>
+
+                </div>
+
+                <div class="request-main-info">
+
+                    <div class="request-title-row">
+
+                        <h3>
+                            NexaCloud AI Summit
+                        </h3>
+
+                        <span class="request-status new">
+                            New
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Full Conference Production &amp; Keynote Stage Package
+                    </p>
+
+                    <small>
+                        <i class="fa-solid fa-calendar"></i>
+                        18 December 2026
+                        &nbsp;&nbsp;
+                        <i class="fa-solid fa-location-dot"></i>
+                        Chennai
+                    </small>
+
+                </div>
+
+                <div class="request-budget">
+
+                    <span>Estimated Budget</span>
+
+                    <strong>
+                        ₹28,50,000
+                    </strong>
+
+                </div>
+
+                <a href="404-admin.html"><button
+                    type="button"
+                    class="request-view-btn"
+                >
+                    View
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button></a>
+
+            </article>
+
+
+            <!-- REQUEST 2 -->
+
+            <article class="request-item">
+
+                <div class="request-client-icon blue">
+
+                    <i class="fa-solid fa-video"></i>
+
+                </div>
+
+                <div class="request-main-info">
+
+                    <div class="request-title-row">
+
+                        <h3>
+                            Apex FinTech Forum
+                        </h3>
+
+                        <span class="request-status review">
+                            In Review
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Multi-Cam Live Broadcast &amp; AV Direction
+                    </p>
+
+                    <small>
+                        <i class="fa-solid fa-calendar"></i>
+                        22 December 2026
+                        &nbsp;&nbsp;
+                        <i class="fa-solid fa-location-dot"></i>
+                        Coimbatore
+                    </small>
+
+                </div>
+
+                <div class="request-budget">
+
+                    <span>Estimated Budget</span>
+
+                    <strong>
+                        ₹12,40,000
+                    </strong>
+
+                </div>
+
+                <a href="404-admin.html"><button
+                    type="button"
+                    class="request-view-btn"
+                >
+                    View
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button></a>
+
+            </article>
+
+
+            <!-- REQUEST 3 -->
+
+            <article class="request-item">
+
+                <div class="request-client-icon gold">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                </div>
+
+                <div class="request-main-info">
+
+                    <div class="request-title-row">
+
+                        <h3>
+                            BioVantage Congress
+                        </h3>
+
+                        <span class="request-status approved">
+                            Approved
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Exhibition Pavilions &amp; Breakout Track Setup
+                    </p>
+
+                    <small>
+                        <i class="fa-solid fa-calendar"></i>
+                        04 January 2027
+                        &nbsp;&nbsp;
+                        <i class="fa-solid fa-location-dot"></i>
+                        Bengaluru
+                    </small>
+
+                </div>
+
+                <div class="request-budget">
+
+                    <span>Estimated Budget</span>
+
+                    <strong>
+                        ₹19,20,000
+                    </strong>
+
+                </div>
+
+                <a href="404-admin.html"><button
+                    type="button"
+                    class="request-view-btn"
+                >
+                    View
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button></a>
+
+            </article>
+
+
+            <!-- REQUEST 4 -->
+
+            <article class="request-item">
+
+                <div class="request-client-icon green">
+
+                    <i class="fa-solid fa-utensils"></i>
+
+                </div>
+
+                <div class="request-main-info">
+
+                    <div class="request-title-row">
+
+                        <h3>
+                            Horizon Launch Showcase
+                        </h3>
+
+                        <span class="request-status completed">
+                            Completed
+                        </span>
+
+                    </div>
+
+                    <p>
+                        VIP Press Hospitality &amp; Gala Dinner
+                    </p>
+
+                    <small>
+                        <i class="fa-solid fa-calendar"></i>
+                        12 January 2027
+                        &nbsp;&nbsp;
+                        <i class="fa-solid fa-location-dot"></i>
+                        Hyderabad
+                    </small>
+
+                </div>
+
+                <div class="request-budget">
+
+                    <span>Estimated Budget</span>
+
+                    <strong>
+                        ₹14,60,000
+                    </strong>
+
+                </div>
+
+                <a href="404-admin.html"><button
+                    type="button"
+                    class="request-view-btn"
+                >
+                    View
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button></a>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         REQUEST INSIGHTS
+    ====================================================== -->
+
+    <section class="request-insights-grid">
+
+        <!-- REQUEST TYPES -->
+
+        <div class="request-insight-card">
+
+            <div class="request-insight-header">
+
+                <div>
+
+                    <span class="request-section-label">
+                        REQUEST TYPES
+                    </span>
+
+                    <h2>
+                        In-Demand Solutions
+                    </h2>
+
+                </div>
+
+                <i class="fa-solid fa-chart-pie"></i>
+
+            </div>
+
+
+            <div class="request-service-list">
+
+                <div class="request-service-row">
+
+                    <div>
+                        <i class="fa-solid fa-microphone-lines"></i>
+                        <span>Summit Production</span>
+                    </div>
+
+                    <strong>42</strong>
+
+                </div>
+
+
+                <div class="request-service-row">
+
+                    <div>
+                        <i class="fa-solid fa-video"></i>
+                        <span>AV &amp; Hybrid Broadcast</span>
+                    </div>
+
+                    <strong>31</strong>
+
+                </div>
+
+
+                <div class="request-service-row">
+
+                    <div>
+                        <i class="fa-solid fa-layer-group"></i>
+                        <span>Expo Booths &amp; Staging</span>
+                    </div>
+
+                    <strong>28</strong>
+
+                </div>
+
+
+                <div class="request-service-row">
+
+                    <div>
+                        <i class="fa-solid fa-utensils"></i>
+                        <span>Executive Hospitality</span>
+                    </div>
+
+                    <strong>27</strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUICK ACTIONS -->
+
+        <div class="request-insight-card">
+
+            <div class="request-insight-header">
+
+                <div>
+
+                    <span class="request-section-label">
+                        QUICK ACTIONS
+                    </span>
+
+                    <h2>
+                        Manage Requests
+                    </h2>
+
+                </div>
+
+                <i class="fa-solid fa-bolt"></i>
+
+            </div>
+
+
+            <div class="request-quick-actions">
+
+                <a href="404-admin.html"><button type="button">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    <span>
+                        Create RFP
+                    </span>
+
+                </button></a>
+
+
+                <a href="404-admin.html"><button type="button">
+
+                    <i class="fa-solid fa-file-export"></i>
+
+                    <span>
+                        Export Report
+                    </span>
+
+                </button></a>
+
+
+                <a href="clients.html"><button type="button">
+
+                    <i class="fa-solid fa-user-group"></i>
+
+                    <span>
+                        View Clients
+                    </span>
+
+                </button></a>
+
+
+                <a href="404-admin.html"><button type="button">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    <span>
+                        Notifications
+                    </span>
+
+                </button></a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         RECENT REQUEST ACTIVITY
+    ====================================================== -->
+
+    <section class="request-activity-panel">
+
+        <div class="request-activity-header">
+
+            <div>
+
+                <span class="request-section-label">
+                    RECENT ACTIVITY
+                </span>
+
+                <h2>
+                    Request Updates
+                </h2>
+
+            </div>
+
+            <a href="404-admin.html">
+                View All
+            </a>
+
+        </div>
+
+
+        <div class="request-activity-list">
+
+
+            <div class="request-activity-row">
+
+                <div class="request-activity-icon purple">
+                    <i class="fa-solid fa-file-circle-plus"></i>
+                </div>
+
+                <div>
+
+                    <strong>
+                        New summit RFP received
+                    </strong>
+
+                    <span>
+                        NexaCloud AI Summit submitted an enterprise conference request.
+                    </span>
+
+                    <small>
+                        15 minutes ago
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="request-activity-row">
+
+                <div class="request-activity-icon green">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+
+                <div>
+
+                    <strong>
+                        Request approved
+                    </strong>
+
+                    <span>
+                        BioVantage Congress exhibition floor request was approved.
+                    </span>
+
+                    <small>
+                        42 minutes ago
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="request-activity-row">
+
+                <div class="request-activity-icon gold">
+                    <i class="fa-solid fa-message"></i>
+                </div>
+
+                <div>
+
+                    <strong>
+                        Technical inquiry received
+                    </strong>
+
+                    <span>
+                        Apex FinTech Forum sent a message regarding hybrid streaming latency.
+                    </span>
+
+                    <small>
+                        1 hour ago
+                    </small>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+</div>
+
+</main>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     ADMIN DASHBOARD JAVASCRIPT
+========================================================= -->
+
+<script src="admin.js"></script>
+
+
+</body>
+
+</html>
